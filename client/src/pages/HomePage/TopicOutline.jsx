@@ -1,5 +1,6 @@
 import React, { forwardRef } from 'react';
-import { Container, Typography, Box, Paper } from '@mui/material';
+import { Button, Container, Typography, Box, Paper } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 const topics = [
   { id: 1, title: 'Introduction to Python' },
@@ -10,7 +11,7 @@ const topics = [
   { id: 6, title: 'Control Structures' },
   { id: 7, title: 'Data Structures' },
   { id: 8, title: 'For Loops' },
-  { id: 8, title: 'While Loops' },
+  { id: 9, title: 'While Loops' },
 ];
 
 function TopicOutline(props, ref) {
@@ -24,12 +25,14 @@ function TopicOutline(props, ref) {
         programming. Here, you will learn the concepts of:
       </Typography>
 
+      {/* Topics */}
       <Box
         sx={{
+          alignSelf: 'center',
           display: 'grid',
           gridTemplateColumns: 'repeat(3, 200px)',
           gap: '32px',
-          alignSelf: 'center',
+          mb: 7,
         }}
       >
         {topics.map((topic) => (
@@ -48,6 +51,16 @@ function TopicOutline(props, ref) {
           </Paper>
         ))}
       </Box>
+
+      <Button
+        component={Link}
+        sx={{ alignSelf: 'center', width: '25%' }}
+        size="large"
+        variant="contained"
+        to="/intro/whatispython"
+      >
+        Proceed
+      </Button>
     </Container>
   );
 }
