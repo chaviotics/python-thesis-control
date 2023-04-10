@@ -41,7 +41,7 @@ function TopicOutline(props, ref) {
               textAlign: 'center',
               p: 4,
             }}
-            elevation={2}
+            elevation={3}
             key={topic.id}
           >
             <Typography>{topic.title}</Typography>
