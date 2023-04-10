@@ -9,7 +9,8 @@ const topics = [
   { id: 5, title: 'Input/Output' },
   { id: 6, title: 'Control Structures' },
   { id: 7, title: 'Data Structures' },
-  { id: 8, title: 'Loops' },
+  { id: 8, title: 'For Loops' },
+  { id: 8, title: 'While Loops' },
 ];
 
 function TopicOutline(props, ref) {
