@@ -9,6 +9,8 @@ import {
   ThemeProvider,
 } from '@mui/material';
 import { Brightness4, Brightness7 } from '@mui/icons-material';
+
+// Pages
 import WhatIsPython from './pages/Introduction/WhatIsPython';
 import HelloWorld from './pages/Introduction/HelloWorld';
 import Comment from './pages/Introduction/Comment';
