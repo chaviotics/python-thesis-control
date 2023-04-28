@@ -20,7 +20,7 @@ function Summary() {
 
       <Box
         sx={{
-          pt: '2rem',
+          pt: '3rem',
           display: 'flex',
           alignItems: 'center',
           gap: '2.4rem',
@@ -28,7 +28,7 @@ function Summary() {
       >
         <img src={pythonLogo} />
         <Box>
-          <Typography pb={'1rem'}>
+          <Typography mb={'2rem'}>
             Python is a high-level, interpreted, and general-purpose programming
             language. It was created by Guido van Rossum in the late 1980s and
             designed to emphasize readability and simplicity.{' '}
@@ -46,11 +46,29 @@ function Summary() {
   );
 }
 
-function LanguageComparisonTable() {
+function CompareWithCIntro() {
   return (
     <Box
       sx={{
-        mt: '4rem',
+        mt: '7rem',
+        display: 'flex',
+        flexDirection: 'column',
+      }}
+    >
+      <Typography variant="h4">How does Python compare with C?</Typography>
+      <Typography mt="1rem">
+        Python and C are two popular programming languages that have some key
+        differences:
+      </Typography>
+    </Box>
+  );
+}
+
+function CompareWithTable() {
+  return (
+    <Box
+      sx={{
+        mt: '2rem',
         display: 'flex',
         flexDirection: 'column',
         border: '1px solid #ddd',
@@ -166,20 +184,31 @@ function LanguageComparisonTable() {
   );
 }
 
-function WhatIsPython() {
+function CompareWithCOutro() {
   return (
-    <Container
-      sx={{
-        mt: '64px',
-        display: 'flex',
-        flexDirection: 'column',
-      }}
-    >
-      <Summary />
-      <LanguageComparisonTable />
+    <Typography mt="2rem">
+      Both Python and C have their own strengths and weaknesses, and the choice
+      between them depends on the specific requirements of a project.
+    </Typography>
+  );
+}
+
+function CompareWithC() {
+  return (
+    <Container>
+      <CompareWithCIntro />
+      <CompareWithTable />
+      <CompareWithCOutro />
+    </Container>
+  );
+}
+
+function Proceed() {
+  return (
+    <Box sx={{ display: 'flex', flexDirection: 'column' }}>
       <Button
         component={Link}
-        sx={{ alignSelf: 'center', width: '25%', mt: '3.6rem' }}
+        sx={{ alignSelf: 'center', width: '25%', mt: '5rem' }}
         size="large"
         variant="contained"
         to="/intro/helloworld"
@@ -192,12 +221,28 @@ function WhatIsPython() {
           fontStyle: 'italic',
           textAlign: 'center',
           mt: '.5rem',
-          mb: '5rem',
+          mb: '7rem',
         }}
       >
         Note: You cannot go back to the previous page once you proceed to the
         next.
       </Typography>
+    </Box>
+  );
+}
+
+function WhatIsPython() {
+  return (
+    <Container
+      sx={{
+        mt: '64px',
+        display: 'flex',
+        flexDirection: 'column',
+      }}
+    >
+      <Summary />
+      <CompareWithC />
+      <Proceed />
     </Container>
   );
 }
