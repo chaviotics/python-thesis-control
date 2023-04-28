@@ -14,6 +14,24 @@ const topics = [
   { id: 9, title: 'While Loops' },
 ];
 
+function Proceed() {
+  const handleProceed = () => {
+    window.scrollTo(0, 0);
+  };
+  return (
+    <Button
+      component={Link}
+      sx={{ alignSelf: 'center', width: '25%' }}
+      size="large"
+      variant="contained"
+      to="/intro/whatispython"
+      onClick={handleProceed}
+    >
+      Proceed
+    </Button>
+  );
+}
+
 function TopicOutline(props, ref) {
   return (
     <Container
@@ -51,16 +69,7 @@ function TopicOutline(props, ref) {
           </Paper>
         ))}
       </Box>
-
-      <Button
-        component={Link}
-        sx={{ alignSelf: 'center', width: '25%' }}
-        size="large"
-        variant="contained"
-        to="/intro/whatispython"
-      >
-        Proceed
-      </Button>
+      <Proceed />
     </Container>
   );
 }

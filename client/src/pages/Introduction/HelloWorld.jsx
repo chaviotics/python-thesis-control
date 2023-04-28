@@ -98,6 +98,10 @@ function IDE() {
 }
 
 function Proceed() {
+  const handleProceed = () => {
+    window.scrollTo(0, 0);
+  };
+
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column' }}>
       <Button
@@ -106,6 +110,7 @@ function Proceed() {
         size="large"
         variant="contained"
         to="/intro/comment"
+        onClick={handleProceed}
       >
         Proceed
       </Button>

@@ -204,6 +204,10 @@ function CompareWithC() {
 }
 
 function Proceed() {
+  const handleProceed = () => {
+    window.scrollTo(0, 0);
+  };
+
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column' }}>
       <Button
@@ -212,6 +216,7 @@ function Proceed() {
         size="large"
         variant="contained"
         to="/intro/helloworld"
+        onClick={handleProceed}
       >
         Proceed
       </Button>
