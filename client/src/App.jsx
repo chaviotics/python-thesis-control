@@ -77,6 +77,9 @@ function App() {
     },
     typography: {
       fontFamily: ['Rubik', 'Arial', 'sans-serif'].join(','),
+      body1: {
+        fontSize: '1.2rem',
+      },
     },
   });
 
