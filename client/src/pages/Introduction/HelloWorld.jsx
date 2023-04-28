@@ -127,7 +127,9 @@ function Proceed() {
         }}
       >
         Note: You cannot go back to the previous page once you proceed to the
-        next.
+        next. <br />
+        Please take your time and review the material carefully before moving
+        forward.
       </Typography>
     </Box>
   );

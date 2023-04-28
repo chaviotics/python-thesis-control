@@ -1,6 +1,5 @@
 import React, { forwardRef } from 'react';
-import { Button, Container, Typography, Box, Paper } from '@mui/material';
-import { Link } from 'react-router-dom';
+import { Container, Typography, Box, Paper } from '@mui/material';
 
 const topics = [
   { id: 1, title: 'Introduction to Python' },
@@ -12,32 +11,23 @@ const topics = [
   { id: 7, title: 'Data Structures' },
   { id: 8, title: 'For Loops' },
   { id: 9, title: 'While Loops' },
+  { id: 10, title: 'Functions' },
 ];
-
-function Proceed() {
-  const handleProceed = () => {
-    window.scrollTo(0, 0);
-  };
-  return (
-    <Button
-      component={Link}
-      sx={{ alignSelf: 'center', width: '25%' }}
-      size="large"
-      variant="contained"
-      to="/intro/whatispython"
-      onClick={handleProceed}
-    >
-      Proceed
-    </Button>
-  );
-}
 
 function TopicOutline(props, ref) {
   return (
     <Container
-      sx={{ display: 'flex', flexDirection: 'column', height: '85vh' }}
+      sx={{
+        display: 'flex',
+        flexDirection: 'column',
+        pt: '7rem',
+        height: '75vh',
+      }}
       ref={ref}
     >
+      <Typography sx={{ textAlign: 'center', mb: 1 }} variant="h3">
+        TOPICS
+      </Typography>
       <Typography sx={{ textAlign: 'center', mb: 3 }}>
         This interactive tutorial will teach you the basics of Python
         programming. Here, you will learn the concepts of:
@@ -48,7 +38,7 @@ function TopicOutline(props, ref) {
         sx={{
           alignSelf: 'center',
           display: 'grid',
-          gridTemplateColumns: 'repeat(3, 200px)',
+          gridTemplateColumns: 'repeat(4, 200px)',
           gap: '32px',
           mb: 7,
         }}
@@ -61,6 +51,10 @@ function TopicOutline(props, ref) {
               justifyContent: 'center',
               textAlign: 'center',
               p: 4,
+              transition: 'all 0.2s',
+              '&:hover': {
+                transform: 'scale(1.1)',
+              },
             }}
             elevation={3}
             key={topic.id}
@@ -69,7 +63,6 @@ function TopicOutline(props, ref) {
           </Paper>
         ))}
       </Box>
-      <Proceed />
     </Container>
   );
 }

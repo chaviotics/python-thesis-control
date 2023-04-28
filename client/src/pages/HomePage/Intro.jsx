@@ -12,7 +12,11 @@ function Intro(props) {
         justifyContent: 'center',
       }}
     >
-      <Typography variant="h3" sx={{ textAlign: 'center', mb: 7 }}>
+      <Typography
+        variant="h2"
+        sx={{ textAlign: 'center', mb: 7 }}
+        fontWeight="regular"
+      >
         Welcome to this <br />
         Interactive Python Tutorial
       </Typography>

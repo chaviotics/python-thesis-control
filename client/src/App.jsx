@@ -21,46 +21,60 @@ import ArithmeticOps from './pages/ArithmeticOps/ArithmeticOps';
 import ConditionalStatements from './pages/ConditionalStatements/ConditionalStatements';
 import ForLoop from './pages/ForLoop/ForLoop';
 import WhileLoop from './pages/WhileLoop/WhileLoop';
+import Functions from './pages/Functions/Functions';
 
 function NavBar() {
   return (
-    <nav style={{ color: 'red' }}>
-      <ul>
-        <li>
-          <Link to="/">Main</Link>
-        </li>
-        <li>
-          <Link to="/intro/whatispython">What is Python</Link>
-        </li>
-        <li>
-          <Link to="/intro/helloworld">Hello, World!</Link>
-        </li>
-        <li>
-          <Link to="/intro/comment">Comment</Link>
-        </li>
-        <li>
-          <Link to="/variables">Variables</Link>
-        </li>
-        <li>
-          <Link to="/datatypes">Data Types</Link>
-        </li>
-        <li>
-          <Link to="/arithmeticops">Arithmetic Ops</Link>
-        </li>
-        <li>
-          <Link to="/conditionals">Conditional Statements</Link>
-        </li>
-        <li>
-          <Link to="/forloop">For Loop</Link>
-        </li>
-        <li>
-          <Link to="/whileloop">While Loop</Link>
-        </li>
-        <li>
-          <Link to="/quiz">Quiz</Link>
-        </li>
-      </ul>
-    </nav>
+    <Box
+      sx={{
+        border: '2px red solid',
+        position: 'fixed',
+        top: '48px',
+        right: '36px',
+        pr: '1rem',
+      }}
+    >
+      <nav style={{ color: 'red' }}>
+        <ul>
+          <li>
+            <Link to="/">Main</Link>
+          </li>
+          <li>
+            <Link to="/intro/whatispython">What is Python</Link>
+          </li>
+          <li>
+            <Link to="/intro/helloworld">Hello, World!</Link>
+          </li>
+          <li>
+            <Link to="/intro/comment">Comment</Link>
+          </li>
+          <li>
+            <Link to="/variables">Variables</Link>
+          </li>
+          <li>
+            <Link to="/datatypes">Data Types</Link>
+          </li>
+          <li>
+            <Link to="/arithmeticops">Arithmetic Ops</Link>
+          </li>
+          <li>
+            <Link to="/conditionals">Conditional Statements</Link>
+          </li>
+          <li>
+            <Link to="/forloop">For Loop</Link>
+          </li>
+          <li>
+            <Link to="/whileloop">While Loop</Link>
+          </li>
+          <li>
+            <Link to="/functions">Functions</Link>
+          </li>
+          <li>
+            <Link to="/quiz">Quiz</Link>
+          </li>
+        </ul>
+      </nav>
+    </Box>
   );
 }
 
@@ -89,16 +103,7 @@ function App() {
         <CssBaseline />
 
         {/* NavBar is for dev purposes */}
-        <Box
-          sx={{
-            border: '2px red solid',
-            position: 'absolute',
-            top: '48px',
-            right: '36px',
-          }}
-        >
-          <NavBar />
-        </Box>
+        <NavBar />
 
         {/* Toggle Light/Dark Mode */}
         <IconButton
@@ -121,6 +126,7 @@ function App() {
           <Route path="/conditionals" element={<ConditionalStatements />} />
           <Route path="/forloop" element={<ForLoop />} />
           <Route path="/whileloop" element={<WhileLoop />} />
+          <Route path="/functions" element={<Functions />} />
           <Route path="/quiz" element={<Quiz />} />
         </Routes>
       </ThemeProvider>
