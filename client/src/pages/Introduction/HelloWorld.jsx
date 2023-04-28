@@ -18,33 +18,18 @@ function IntroHeading() {
       </Typography>
       <Typography variant="h2">Hello, World!</Typography>
 
-      <Box
-        sx={{
-          pt: '2rem',
-          display: 'flex',
-          alignItems: 'center',
-          gap: '2.4rem',
-        }}
-      >
-        <Box>
-          <Typography pb="1rem">
-            Learning a new language wouldn’t feel right if you don’t print“Hello
-            World!” Here’s how you can do it in Python:
-          </Typography>
-          <Typography pt="1rem">
-            The <code>print()</code> function is used to output text or data to
-            the console or terminal. It's a simple and powerful tool that can be
-            used to display information, debug code, and communicate with the
-            user.
-          </Typography>
-        </Box>
+      <Box sx={{ mt: '2rem', alignSelf: 'flex-start' }}>
+        <Typography>
+          Learning a new language wouldn’t feel right if you don’t print“Hello
+          World!” Here’s how you can do it in Python:
+        </Typography>
       </Box>
     </Container>
   );
 }
 
 function CodeEditor() {
-  const code = "print('Hello, World')";
+  const code = "print('Hello, World')\nprint(1+2)\nprint(False)";
   return (
     <Box sx={{ height: '120px' }}>
       <Typography variant="h5" pb="0.5rem">
@@ -79,6 +64,8 @@ function OutputBox() {
         }}
       >
         <Typography>Hello, World!</Typography>
+        <Typography>3</Typography>
+        <Typography>False</Typography>
       </Box>
     </Box>
   );
@@ -86,13 +73,29 @@ function OutputBox() {
 
 function IDE() {
   return (
-    <Container sx={{ mt: '2rem', display: 'flex', flexDirection: 'row' }}>
+    <Container sx={{ mt: '0.5rem', display: 'flex', flexDirection: 'row' }}>
       <Box sx={{ width: '50%', mr: '2rem' }}>
         <CodeEditor />
       </Box>
       <Box sx={{ width: '50%' }}>
         <OutputBox />
       </Box>
+    </Container>
+  );
+}
+
+function PrintExplanation() {
+  return (
+    <Container>
+      <Typography>
+        {' '}
+        <Typography pt="3.6rem">
+          The <code>print()</code> function is used to output text or data to
+          the console or terminal. It's a simple and powerful tool that can be
+          used to display information, debug code, and communicate with the
+          user.
+        </Typography>
+      </Typography>
     </Container>
   );
 }
@@ -141,6 +144,7 @@ function HelloWorld() {
     >
       <IntroHeading />
       <IDE />
+      <PrintExplanation />
       <Proceed />
     </Container>
   );
