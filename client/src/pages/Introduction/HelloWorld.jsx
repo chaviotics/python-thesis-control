@@ -73,7 +73,7 @@ function OutputBox() {
 
 function IDE() {
   return (
-    <Container sx={{ mt: '0.5rem', display: 'flex', flexDirection: 'row' }}>
+    <Container sx={{ mt: '1rem', display: 'flex', flexDirection: 'row' }}>
       <Box sx={{ width: '50%', mr: '2rem' }}>
         <CodeEditor />
       </Box>

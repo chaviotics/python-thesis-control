@@ -30,7 +30,8 @@ function Message() {
         <br />
         <br />
         Moreover, try not to go to other tabs on your browser while taking this
-        tutorial.
+        tutorial. You can full screen your web browser, by pressing{' '}
+        <code>F11</code>.
         <br />
         <br />
         If you want to change to dark/light mode, press the button at the upper

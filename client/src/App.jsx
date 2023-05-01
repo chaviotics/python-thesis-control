@@ -15,8 +15,8 @@ import WhatIsPython from './pages/Introduction/WhatIsPython';
 import HelloWorld from './pages/Introduction/HelloWorld';
 import Comment from './pages/Introduction/Comment';
 import Quiz from './pages/Quiz/Quiz';
-import Variable from './pages/Variables/Variable';
 import DataTypes from './pages/DataTypes/DataTypes';
+import Variable from './pages/Variables/Variable';
 import ArithmeticOps from './pages/ArithmeticOps/ArithmeticOps';
 import ConditionalStatements from './pages/ConditionalStatements/ConditionalStatements';
 import ForLoop from './pages/ForLoop/ForLoop';
@@ -49,10 +49,10 @@ function NavBar() {
             <Link to="/intro/comment">Comment</Link>
           </li>
           <li>
-            <Link to="/variables">Variables</Link>
+            <Link to="/datatypes">Data Types</Link>
           </li>
           <li>
-            <Link to="/datatypes">Data Types</Link>
+            <Link to="/variables">Variables</Link>
           </li>
           <li>
             <Link to="/arithmeticops">Arithmetic Ops</Link>
@@ -120,8 +120,8 @@ function App() {
           <Route path="/intro/helloworld" element={<HelloWorld />} />
           <Route path="/intro/comment" element={<Comment />} />
           <Route path="/quiz" element={<Quiz />} />
-          <Route path="/variables" element={<Variable />} />
           <Route path="/datatypes" element={<DataTypes />} />
+          <Route path="/variables" element={<Variable />} />
           <Route path="/arithmeticops" element={<ArithmeticOps />} />
           <Route path="/conditionals" element={<ConditionalStatements />} />
           <Route path="/forloop" element={<ForLoop />} />
