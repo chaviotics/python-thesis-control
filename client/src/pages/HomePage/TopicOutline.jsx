@@ -21,7 +21,7 @@ function TopicOutline(props, ref) {
         display: 'flex',
         flexDirection: 'column',
         pt: '7rem',
-        height: '75vh',
+        height: '100vh',
       }}
       ref={ref}
     >
@@ -63,6 +63,16 @@ function TopicOutline(props, ref) {
           </Paper>
         ))}
       </Box>
+      <Typography
+        sx={{
+          fontSize: 'small',
+          fontStyle: 'italic',
+          textAlign: 'center',
+          mt: '1rem',
+        }}
+      >
+        You may scroll down after reading this part!
+      </Typography>
     </Container>
   );
 }

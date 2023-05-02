@@ -50,7 +50,7 @@ function DataTypesList() {
         sx={{
           alignSelf: 'center',
           display: 'grid',
-          gridTemplateColumns: 'repeat(2, 480px)',
+          gridTemplateColumns: 'repeat(2, 400px)',
           // gridAutoRows: '300px',
           gap: '32px',
           mb: 7,
@@ -68,11 +68,11 @@ function DataTypesList() {
               },
             }}
           >
-            <Typography mb="1rem" textAlign="center" variant="h4">
+            <Typography mb="1rem" textAlign="center" variant="h5" fontWeight="bold">
               {dataType.type}
             </Typography>
-            <Typography mb="0.8rem">{dataType.description}</Typography>
-            <Typography variant="h5">Examples: </Typography>
+            <Typography mb="0.8rem" textAlign="justify">{dataType.description}</Typography>
+            <Typography variant="h6">Examples: </Typography>
 
             <List>
               {dataType.examples.map((example, index) => (
