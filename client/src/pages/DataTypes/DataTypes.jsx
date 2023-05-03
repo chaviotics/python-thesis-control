@@ -9,6 +9,7 @@ import {
   ListItem,
 } from '@mui/material';
 import { Link } from 'react-router-dom';
+import Editor from '@monaco-editor/react';
 import dataTypesList from './basicDataTypes';
 
 function IntroHeading() {
@@ -37,7 +38,6 @@ function IntroHeading() {
 }
 
 function DataTypesList() {
-  console.log(dataTypesList);
   return (
     <Container
       sx={{
@@ -68,10 +68,17 @@ function DataTypesList() {
               },
             }}
           >
-            <Typography mb="1rem" textAlign="center" variant="h5" fontWeight="bold">
+            <Typography
+              mb="1rem"
+              textAlign="center"
+              variant="h5"
+              fontWeight="bold"
+            >
               {dataType.type}
             </Typography>
-            <Typography mb="0.8rem" textAlign="justify">{dataType.description}</Typography>
+            <Typography mb="0.8rem" textAlign="justify">
+              {dataType.description}
+            </Typography>
             <Typography variant="h6">Examples: </Typography>
 
             <List>
@@ -87,13 +94,6 @@ function DataTypesList() {
           </Paper>
         ))}
       </Box>
-    </Container>
-  );
-}
-
-function Outro() {
-  return (
-    <Container>
       <Typography>
         These data types are fundamental building blocks of Python programs and
         are used extensively in many different applications. In addition to
@@ -101,6 +101,47 @@ function Outro() {
         lists, tuples, dictionaries, sets, and more. But that’s another topic
         for another time 😊
       </Typography>
+    </Container>
+  );
+}
+
+function CodeEditor() {
+  const code = `y = "hello"
+print(type(y)) # prints out <class 'str'>, meaning y is a string
+
+z = 3.14
+print(type(z)) # prints out <class 'float'>, meaning z is a float
+
+w = True
+print(type(w)) # prints out <class 'bool'>, meaning w is a boolean
+`;
+
+  return (
+    <Box sx={{ height: '340px' }}>
+      <Editor
+        theme="vs-dark"
+        defaultLanguage="python"
+        value={code}
+        options={{
+          fontSize: '20px',
+          readOnly: true,
+        }}
+      />
+    </Box>
+  );
+}
+
+function TypeFunc() {
+  return (
+    <Container>
+      <Typography mt="7rem" textAlign="center" variant="h2">
+        <code>Type()</code> Function
+      </Typography>
+      <Typography sx={{ mt: '2rem', mb: '1rem' }}>
+        In Python, you can check of the type of the value by using the built-in
+        function <code>type()</code>.{' '}
+      </Typography>
+      <CodeEditor />
     </Container>
   );
 }
@@ -151,7 +192,7 @@ function DataTypes() {
     >
       <IntroHeading />
       <DataTypesList />
-      <Outro />
+      <TypeFunc />
       <Proceed />
     </Container>
   );
