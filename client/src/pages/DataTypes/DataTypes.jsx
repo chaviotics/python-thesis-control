@@ -106,15 +106,11 @@ function DataTypesList() {
 }
 
 function CodeEditor() {
-  const code = `y = "hello"
-print(type(y)) # prints out <class 'str'>, meaning y is a string
+  const code = `print(type("hello")) # prints out <class 'str'>, meaning "hello" is a string
 
-z = 3.14
-print(type(z)) # prints out <class 'float'>, meaning z is a float
+print(type(3.14)) # prints out <class 'float'>, meaning 3.14 is a float
 
-w = True
-print(type(w)) # prints out <class 'bool'>, meaning w is a boolean
-`;
+print(type(True)) # prints out <class 'bool'>, meaning True is a boolean`;
 
   return (
     <Box sx={{ height: '340px' }}>

@@ -63,9 +63,15 @@ function OutputBox() {
           overflow: 'auto',
         }}
       >
-        <Typography>Hello, World!</Typography>
-        <Typography>3</Typography>
-        <Typography>False</Typography>
+        <Typography>
+          <code>Hello, World!</code>
+        </Typography>
+        <Typography>
+          <code>3</code>
+        </Typography>
+        <Typography>
+          <code>False</code>
+        </Typography>
       </Box>
     </Box>
   );
