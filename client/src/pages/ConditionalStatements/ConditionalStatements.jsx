@@ -14,9 +14,9 @@ function IntroHeading() {
       }}
     >
       <Typography variant="h4" fontWeight="bold">
-        ARITHMETIC OPERATIONS
+        CONDITIONAL STATEMENTS
       </Typography>
-      <Typography variant="h2">Arithmetic Operations</Typography>
+      <Typography variant="h2">Conditional Statements</Typography>
 
       <Box sx={{ mt: '2rem', alignSelf: 'flex-start' }}>
         <Typography>
