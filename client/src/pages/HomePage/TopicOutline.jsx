@@ -21,7 +21,7 @@ function TopicOutline(props, ref) {
         display: 'flex',
         flexDirection: 'column',
         pt: '7rem',
-        height: '100vh',
+        mb: '7rem',
       }}
       ref={ref}
     >
@@ -40,7 +40,7 @@ function TopicOutline(props, ref) {
           display: 'grid',
           gridTemplateColumns: 'repeat(4, 200px)',
           gap: '32px',
-          mb: 7,
+          mb: 5,
         }}
       >
         {topics.map((topic) => (
@@ -66,7 +66,7 @@ function TopicOutline(props, ref) {
       </Box>
       <Typography
         sx={{
-          fontSize: 'small',
+          fontSize: 'medium',
           fontStyle: 'italic',
           textAlign: 'center',
           mt: '1rem',

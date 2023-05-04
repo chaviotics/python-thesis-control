@@ -2,6 +2,7 @@ import React from 'react';
 import { Box, Container, Typography, List, ListItem } from '@mui/material';
 import Editor from '@monaco-editor/react';
 import Proceed from '../../components/Proceed';
+import NoteForScroll from '../../components/NoteForScroll';
 
 const operations = [
   { id: 1, operation: `Addition (+)` },
@@ -72,10 +73,11 @@ print(3 ** 2) # Output: 9
 
   return (
     <Container>
-      <Typography mt="1rem" mb="1rem">
+      <Typography mt="1rem">
         Here are some examples of how to perform these operations:
       </Typography>
-      <Box sx={{ height: '640px' }}>
+      <NoteForScroll />
+      <Box sx={{ mt: '1rem', height: '640px' }}>
         <Editor
           theme="vs-dark"
           defaultLanguage="python"

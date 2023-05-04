@@ -2,6 +2,7 @@ import React from 'react';
 import { Box, Container, Typography } from '@mui/material';
 import Editor from '@monaco-editor/react';
 import Proceed from '../../components/Proceed';
+import NoteForScroll from '../../components/NoteForScroll';
 
 function MainContent() {
   return (
@@ -31,6 +32,8 @@ function MainContent() {
         </Typography>
 
         <CodeSyntax />
+
+        <NoteForScroll />
 
         {/* 1st Example */}
 

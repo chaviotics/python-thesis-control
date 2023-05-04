@@ -2,6 +2,7 @@ import React from 'react';
 import { Box, Container, Typography } from '@mui/material';
 import Editor from '@monaco-editor/react';
 import Proceed from '../../components/Proceed';
+import NoteForScroll from '../../components/NoteForScroll';
 
 function IntroHeading() {
   return (
@@ -49,6 +50,8 @@ name = "Alice"
           }}
         />
       </Box>
+
+      <NoteForScroll />
 
       <Typography mt="2rem">
         When you assign a value to a variable, Python{' '}

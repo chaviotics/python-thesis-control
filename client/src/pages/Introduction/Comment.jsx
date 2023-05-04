@@ -2,6 +2,7 @@ import React from 'react';
 import { Box, Container, Typography } from '@mui/material';
 import Editor from '@monaco-editor/react';
 import Proceed from '../../components/Proceed';
+import NoteForScroll from '../../components/NoteForScroll';
 
 function IntroHeading() {
   return (
@@ -62,21 +63,11 @@ print("Hello awesome person!") # This line prints a greeting to the console
 
 function IDE() {
   return (
-    <Container sx={{ mt: '1rem', display: 'flex', flexDirection: 'row' }}>
+    <Container sx={{ mt: '1rem', display: 'flex', flexDirection: 'column' }}>
       <Box width={'100%'} height={'250px'}>
         <CodeEditor />
       </Box>
-    </Container>
-  );
-}
-
-function NoteForScroll() {
-  return (
-    <Container>
-      <Typography fontSize="75%" mt="2rem" fontStyle="italic">
-        Note: If you're having trouble scrolling down, place your mouse cursor
-        outside the code editor and scroll as normal.
-      </Typography>
+      <NoteForScroll />
     </Container>
   );
 }
@@ -92,7 +83,6 @@ function Comment() {
     >
       <IntroHeading />
       <IDE />
-      <NoteForScroll />
       <Proceed linkTo="/datatypes" />
     </Container>
   );
