@@ -53,6 +53,7 @@ print("Hello awesome person!") # This line prints a greeting to the console
         options={{
           fontSize: '20px',
           readOnly: true,
+          scrollBeyondLastLine: false,
         }}
       />
     </Box>

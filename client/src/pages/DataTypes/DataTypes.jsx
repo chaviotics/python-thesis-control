@@ -113,7 +113,7 @@ print(type(3.14)) # prints out <class 'float'>, meaning 3.14 is a float
 print(type(True)) # prints out <class 'bool'>, meaning True is a boolean`;
 
   return (
-    <Box sx={{ height: '340px' }}>
+    <Box sx={{ height: '220px' }}>
       <Editor
         theme="vs-dark"
         defaultLanguage="python"
@@ -121,6 +121,7 @@ print(type(True)) # prints out <class 'bool'>, meaning True is a boolean`;
         options={{
           fontSize: '20px',
           readOnly: true,
+          scrollBeyondLastLine: false,
         }}
       />
     </Box>

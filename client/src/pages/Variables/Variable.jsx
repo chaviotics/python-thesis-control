@@ -45,6 +45,7 @@ name = "Alice"
           options={{
             fontSize: '20px',
             readOnly: true,
+            scrollBeyondLastLine: false,
           }}
         />
       </Box>
@@ -82,6 +83,7 @@ print(type(name))
           options={{
             fontSize: '20px',
             readOnly: true,
+            scrollBeyondLastLine: false,
           }}
         />
       </Box>

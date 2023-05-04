@@ -140,6 +140,7 @@ function CodeSyntax() {
         options={{
           fontSize: '20px',
           readOnly: true,
+          scrollBeyondLastLine: false,
         }}
       />
     </Box>
@@ -166,6 +167,7 @@ if age >= 18:
         options={{
           fontSize: '20px',
           readOnly: true,
+          scrollBeyondLastLine: false,
         }}
       />
     </Box>
@@ -218,6 +220,7 @@ function CodeExample2() {
         options={{
           fontSize: '20px',
           readOnly: true,
+          scrollBeyondLastLine: false,
         }}
       />
     </Box>
@@ -272,6 +275,7 @@ else:
         options={{
           fontSize: '20px',
           readOnly: true,
+          scrollBeyondLastLine: false,
         }}
       />
     </Box>

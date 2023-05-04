@@ -42,6 +42,7 @@ function CodeEditor() {
         options={{
           fontSize: '20px',
           readOnly: true,
+          scrollBeyondLastLine: false,
         }}
       />
     </Box>
