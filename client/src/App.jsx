@@ -2,13 +2,16 @@ import { useState } from 'react';
 import './App.css';
 import { Link, Routes, Route } from 'react-router-dom';
 import {
+  Button,
   Box,
   IconButton,
   createTheme,
   CssBaseline,
   ThemeProvider,
+  List,
+  ListItem,
+  Typography,
 } from '@mui/material';
-import { Brightness4, Brightness7 } from '@mui/icons-material';
 
 // Pages
 import HomePage from './pages/HomePage/HomePage';
@@ -29,61 +32,196 @@ function NavBar() {
   return (
     <Box
       sx={{
-        border: '2px red solid',
+        border: '2px yellow solid',
         position: 'fixed',
-        top: '48px',
-        right: '36px',
+        top: '56px',
+        right: '18px',
         pr: '1rem',
+        backgroundColor: 'blue',
       }}
     >
-      <nav style={{ color: 'red' }}>
-        <ul>
-          <li>
-            <Link to="/">Main</Link>
-          </li>
-          <li>
-            <Link to="/intro/whatispython">What is Python</Link>
-          </li>
-          <li>
-            <Link to="/intro/helloworld">Hello, World!</Link>
-          </li>
-          <li>
-            <Link to="/intro/comment">Comment</Link>
-          </li>
-          <li>
-            <Link to="/datatypes">Data Types</Link>
-          </li>
-          <li>
-            <Link to="/variables">Variables</Link>
-          </li>
-          <li>
-            <Link to="/arithmeticops">Arithmetic Ops</Link>
-          </li>
-          <li>
-            <Link to="/conditionals">Conditional Statements</Link>
-          </li>
-          <li>
-            <Link to="/lists">Lists</Link>
-          </li>
-          <li>
-            <Link to="/forloop">For Loop</Link>
-          </li>
-          <li>
-            <Link to="/whileloop">While Loop</Link>
-          </li>
-          <li>
-            <Link to="/functions">Functions</Link>
-          </li>
-          <li>
-            <Link to="/quiz">Quiz</Link>
-          </li>
-        </ul>
-      </nav>
+      <List>
+        <ListItem>
+          <Typography
+            sx={{
+              color: 'yellow',
+              textDecoration: 'none',
+              '&:hover': { color: '#FFBF00', transform: 'scale(1.1)' },
+            }}
+            component={Link}
+            to="/"
+          >
+            Main
+          </Typography>
+        </ListItem>
+        <ListItem>
+          <Typography
+            sx={{
+              color: 'yellow',
+              textDecoration: 'none',
+              '&:hover': { color: '#FFBF00', transform: 'scale(1.1)' },
+            }}
+            component={Link}
+            to="/intro/whatispython"
+          >
+            What is Python
+          </Typography>
+        </ListItem>
+        <ListItem>
+          <Typography
+            sx={{
+              color: 'yellow',
+              textDecoration: 'none',
+              '&:hover': { color: '#FFBF00', transform: 'scale(1.1)' },
+            }}
+            component={Link}
+            to="/intro/helloworld"
+          >
+            Hello, World!
+          </Typography>
+        </ListItem>
+        <ListItem>
+          <Typography
+            sx={{
+              color: 'yellow',
+              textDecoration: 'none',
+              '&:hover': { color: '#FFBF00', transform: 'scale(1.1)' },
+            }}
+            component={Link}
+            to="/intro/comment"
+          >
+            Comment
+          </Typography>
+        </ListItem>
+        <ListItem>
+          <Typography
+            sx={{
+              color: 'yellow',
+              textDecoration: 'none',
+              '&:hover': { color: '#FFBF00', transform: 'scale(1.1)' },
+            }}
+            component={Link}
+            to="/datatypes"
+          >
+            Data Types
+          </Typography>
+        </ListItem>
+        <ListItem>
+          <Typography
+            sx={{
+              color: 'yellow',
+              textDecoration: 'none',
+              '&:hover': { color: '#FFBF00', transform: 'scale(1.1)' },
+            }}
+            component={Link}
+            to="/variables"
+          >
+            Variables
+          </Typography>
+        </ListItem>
+        <ListItem>
+          <Typography
+            sx={{
+              color: 'yellow',
+              textDecoration: 'none',
+              '&:hover': { color: '#FFBF00', transform: 'scale(1.1)' },
+            }}
+            component={Link}
+            to="/arithmeticops"
+          >
+            Arithmetic Ops
+          </Typography>
+        </ListItem>
+        <ListItem>
+          <Typography
+            sx={{
+              color: 'yellow',
+              textDecoration: 'none',
+              '&:hover': { color: '#FFBF00', transform: 'scale(1.1)' },
+            }}
+            component={Link}
+            to="/conditionals"
+          >
+            Conditional Statements
+          </Typography>
+        </ListItem>
+        <ListItem>
+          <Typography
+            sx={{
+              color: 'yellow',
+              textDecoration: 'none',
+              '&:hover': { color: '#FFBF00', transform: 'scale(1.1)' },
+            }}
+            component={Link}
+            to="/lists"
+          >
+            Lists
+          </Typography>
+        </ListItem>
+        <ListItem>
+          <Typography
+            sx={{
+              color: 'yellow',
+              textDecoration: 'none',
+              '&:hover': { color: '#FFBF00', transform: 'scale(1.1)' },
+            }}
+            component={Link}
+            to="/forloop"
+          >
+            For Loop
+          </Typography>
+        </ListItem>
+        <ListItem>
+          <Typography
+            sx={{
+              color: 'yellow',
+              textDecoration: 'none',
+              '&:hover': { color: '#FFBF00', transform: 'scale(1.1)' },
+            }}
+            component={Link}
+            to="/whileloop"
+          >
+            While Loop
+          </Typography>
+        </ListItem>
+        <ListItem>
+          <Typography
+            sx={{
+              color: 'yellow',
+              textDecoration: 'none',
+              '&:hover': { color: '#FFBF00', transform: 'scale(1.1)' },
+            }}
+            component={Link}
+            to="/functions"
+          >
+            Functions
+          </Typography>
+        </ListItem>
+        <ListItem>
+          <Typography
+            sx={{
+              color: 'yellow',
+              textDecoration: 'none',
+              '&:hover': { color: '#FFBF00', transform: 'scale(1.1)' },
+            }}
+            component={Link}
+            to="/quiz"
+          >
+            Quiz
+          </Typography>
+        </ListItem>
+      </List>
     </Box>
   );
 }
 
 function App() {
+  const [showNavBar, setShowNavBar] = useState(false);
+
+  const toggleNavBar = () => {
+    setShowNavBar(!showNavBar);
+  };
+
   const theme = createTheme({
     palette: {
       primary: {
@@ -115,16 +253,14 @@ function App() {
         <CssBaseline />
 
         {/* NavBar is for dev purposes */}
-        <NavBar />
-
-        {/* Toggle Light/Dark Mode */}
-        {/* <IconButton
-          sx={{ position: 'fixed', top: 0, right: 0 }}
-          color="inherit"
-          onClick={handleToggleTheme}
-        >
-          {darkMode ? <Brightness7 /> : <Brightness4 />}
-        </IconButton> */}
+        <Box sx={{ position: 'fixed', right: '0', top: '0', zIndex: '5' }}>
+          <Button size="large" variant="contained" onClick={toggleNavBar}>
+            {showNavBar ? 'Hide NavBar' : 'Show NavBar'}
+          </Button>
+          {showNavBar && <NavBar />}
+          {/* rest of your code */}
+        </Box>
+        {/* <NavBar /> */}
 
         <Routes>
           <Route path="/" element={<HomePage />} />
