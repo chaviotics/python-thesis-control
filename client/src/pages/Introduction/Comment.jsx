@@ -27,7 +27,7 @@ function IntroHeading() {
         <Typography mt="2rem">
           In Python, you can add a comment by starting a line with the # symbol.
           Everything after the # symbol on that line will be treated as a
-          comment.
+          comment. Check out the code editor below:
         </Typography>
       </Box>
     </Container>
@@ -46,9 +46,6 @@ print("Hello awesome person!") # This line prints a greeting to the console
 
   return (
     <Box sx={{ height: '100%' }}>
-      <Typography variant="h5" pb="0.5rem">
-        Code Editor
-      </Typography>
       <Editor
         theme="vs-dark"
         defaultLanguage="python"
