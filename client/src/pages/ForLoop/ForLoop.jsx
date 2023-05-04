@@ -14,9 +14,9 @@ function IntroHeading() {
       }}
     >
       <Typography variant="h4" fontWeight="bold">
-        FOR LOOPS
+        LOOPS
       </Typography>
-      <Typography variant="h2">For Loops</Typography>
+      <Typography variant="h2">For Loop</Typography>
 
       <Box sx={{ mt: '2rem', alignSelf: 'flex-start' }}>
         <Typography>
