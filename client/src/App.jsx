@@ -20,6 +20,7 @@ import DataTypes from './pages/DataTypes/DataTypes';
 import Variable from './pages/Variables/Variable';
 import ArithmeticOps from './pages/ArithmeticOps/ArithmeticOps';
 import ConditionalStatements from './pages/ConditionalStatements/ConditionalStatements';
+import Lists from './pages/Lists/Lists';
 import ForLoop from './pages/ForLoop/ForLoop';
 import WhileLoop from './pages/WhileLoop/WhileLoop';
 import Functions from './pages/Functions/Functions';
@@ -62,6 +63,9 @@ function NavBar() {
             <Link to="/conditionals">Conditional Statements</Link>
           </li>
           <li>
+            <Link to="/lists">Lists</Link>
+          </li>
+          <li>
             <Link to="/forloop">For Loop</Link>
           </li>
           <li>
@@ -80,16 +84,23 @@ function NavBar() {
 }
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
-
-  const handleToggleTheme = () => {
-    setDarkMode(!darkMode);
-  };
-
   const theme = createTheme({
     palette: {
-      mode: darkMode ? 'dark' : 'light',
+      primary: {
+        main: '#3e96d3',
+      },
+      secondary: {
+        main: '#3081c3',
+      },
+      text: {
+        primary: '#e7ecef',
+        secondary: '#040404',
+      },
+      background: {
+        default: '#0b3c53',
+      },
     },
+
     typography: {
       fontFamily: ['Rubik', 'Arial', 'sans-serif'].join(','),
       body1: {
@@ -107,13 +118,13 @@ function App() {
         <NavBar />
 
         {/* Toggle Light/Dark Mode */}
-        <IconButton
+        {/* <IconButton
           sx={{ position: 'fixed', top: 0, right: 0 }}
           color="inherit"
           onClick={handleToggleTheme}
         >
           {darkMode ? <Brightness7 /> : <Brightness4 />}
-        </IconButton>
+        </IconButton> */}
 
         <Routes>
           <Route path="/" element={<HomePage />} />
@@ -125,6 +136,7 @@ function App() {
           <Route path="/variables" element={<Variable />} />
           <Route path="/arithmeticops" element={<ArithmeticOps />} />
           <Route path="/conditionals" element={<ConditionalStatements />} />
+          <Route path="/lists" element={<Lists />} />
           <Route path="/forloop" element={<ForLoop />} />
           <Route path="/whileloop" element={<WhileLoop />} />
           <Route path="/functions" element={<Functions />} />

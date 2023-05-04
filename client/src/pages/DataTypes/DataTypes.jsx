@@ -63,6 +63,7 @@ function DataTypesList() {
             sx={{
               p: '3rem',
               transition: 'all 0.2s',
+              color: '#0b3c53',
               '&:hover': {
                 transform: 'scale(1.1)',
               },
