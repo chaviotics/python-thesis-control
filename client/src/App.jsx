@@ -29,24 +29,26 @@ import WhileLoop from './pages/WhileLoop/WhileLoop';
 import Functions from './pages/Functions/Functions';
 
 function NavBar() {
+  const linkFontColor = '#fff';
+  const linkFontColorHover = '#ccc';
   return (
     <Box
       sx={{
-        border: '2px yellow solid',
+        border: '2px white solid',
         position: 'fixed',
         top: '56px',
         right: '18px',
         pr: '1rem',
-        backgroundColor: 'blue',
+        backgroundColor: '#3081c3',
       }}
     >
       <List>
-        <ListItem>
+        <ListItem sx={{ py: '0' }}>
           <Typography
             sx={{
-              color: 'yellow',
+              color: linkFontColor,
               textDecoration: 'none',
-              '&:hover': { color: '#FFBF00', transform: 'scale(1.1)' },
+              '&:hover': { color: linkFontColorHover, transform: 'scale(1.1)' },
             }}
             component={Link}
             to="/"
@@ -54,12 +56,12 @@ function NavBar() {
             Main
           </Typography>
         </ListItem>
-        <ListItem>
+        <ListItem sx={{ py: '0' }}>
           <Typography
             sx={{
-              color: 'yellow',
+              color: linkFontColor,
               textDecoration: 'none',
-              '&:hover': { color: '#FFBF00', transform: 'scale(1.1)' },
+              '&:hover': { color: linkFontColorHover, transform: 'scale(1.1)' },
             }}
             component={Link}
             to="/intro/whatispython"
@@ -67,12 +69,12 @@ function NavBar() {
             What is Python
           </Typography>
         </ListItem>
-        <ListItem>
+        <ListItem sx={{ py: '0' }}>
           <Typography
             sx={{
-              color: 'yellow',
+              color: linkFontColor,
               textDecoration: 'none',
-              '&:hover': { color: '#FFBF00', transform: 'scale(1.1)' },
+              '&:hover': { color: linkFontColorHover, transform: 'scale(1.1)' },
             }}
             component={Link}
             to="/intro/helloworld"
@@ -80,12 +82,12 @@ function NavBar() {
             Hello, World!
           </Typography>
         </ListItem>
-        <ListItem>
+        <ListItem sx={{ py: '0' }}>
           <Typography
             sx={{
-              color: 'yellow',
+              color: linkFontColor,
               textDecoration: 'none',
-              '&:hover': { color: '#FFBF00', transform: 'scale(1.1)' },
+              '&:hover': { color: linkFontColorHover, transform: 'scale(1.1)' },
             }}
             component={Link}
             to="/intro/comment"
@@ -93,12 +95,12 @@ function NavBar() {
             Comment
           </Typography>
         </ListItem>
-        <ListItem>
+        <ListItem sx={{ py: '0' }}>
           <Typography
             sx={{
-              color: 'yellow',
+              color: linkFontColor,
               textDecoration: 'none',
-              '&:hover': { color: '#FFBF00', transform: 'scale(1.1)' },
+              '&:hover': { color: linkFontColorHover, transform: 'scale(1.1)' },
             }}
             component={Link}
             to="/datatypes"
@@ -106,12 +108,12 @@ function NavBar() {
             Data Types
           </Typography>
         </ListItem>
-        <ListItem>
+        <ListItem sx={{ py: '0' }}>
           <Typography
             sx={{
-              color: 'yellow',
+              color: linkFontColor,
               textDecoration: 'none',
-              '&:hover': { color: '#FFBF00', transform: 'scale(1.1)' },
+              '&:hover': { color: linkFontColorHover, transform: 'scale(1.1)' },
             }}
             component={Link}
             to="/variables"
@@ -119,12 +121,12 @@ function NavBar() {
             Variables
           </Typography>
         </ListItem>
-        <ListItem>
+        <ListItem sx={{ py: '0' }}>
           <Typography
             sx={{
-              color: 'yellow',
+              color: linkFontColor,
               textDecoration: 'none',
-              '&:hover': { color: '#FFBF00', transform: 'scale(1.1)' },
+              '&:hover': { color: linkFontColorHover, transform: 'scale(1.1)' },
             }}
             component={Link}
             to="/arithmeticops"
@@ -132,12 +134,12 @@ function NavBar() {
             Arithmetic Ops
           </Typography>
         </ListItem>
-        <ListItem>
+        <ListItem sx={{ py: '0' }}>
           <Typography
             sx={{
-              color: 'yellow',
+              color: linkFontColor,
               textDecoration: 'none',
-              '&:hover': { color: '#FFBF00', transform: 'scale(1.1)' },
+              '&:hover': { color: linkFontColorHover, transform: 'scale(1.1)' },
             }}
             component={Link}
             to="/conditionals"
@@ -145,12 +147,12 @@ function NavBar() {
             Conditional Statements
           </Typography>
         </ListItem>
-        <ListItem>
+        <ListItem sx={{ py: '0' }}>
           <Typography
             sx={{
-              color: 'yellow',
+              color: linkFontColor,
               textDecoration: 'none',
-              '&:hover': { color: '#FFBF00', transform: 'scale(1.1)' },
+              '&:hover': { color: linkFontColorHover, transform: 'scale(1.1)' },
             }}
             component={Link}
             to="/lists"
@@ -158,12 +160,12 @@ function NavBar() {
             Lists
           </Typography>
         </ListItem>
-        <ListItem>
+        <ListItem sx={{ py: '0' }}>
           <Typography
             sx={{
-              color: 'yellow',
+              color: linkFontColor,
               textDecoration: 'none',
-              '&:hover': { color: '#FFBF00', transform: 'scale(1.1)' },
+              '&:hover': { color: linkFontColorHover, transform: 'scale(1.1)' },
             }}
             component={Link}
             to="/forloop"
@@ -171,12 +173,12 @@ function NavBar() {
             For Loop
           </Typography>
         </ListItem>
-        <ListItem>
+        <ListItem sx={{ py: '0' }}>
           <Typography
             sx={{
-              color: 'yellow',
+              color: linkFontColor,
               textDecoration: 'none',
-              '&:hover': { color: '#FFBF00', transform: 'scale(1.1)' },
+              '&:hover': { color: linkFontColorHover, transform: 'scale(1.1)' },
             }}
             component={Link}
             to="/whileloop"
@@ -184,12 +186,12 @@ function NavBar() {
             While Loop
           </Typography>
         </ListItem>
-        <ListItem>
+        <ListItem sx={{ py: '0' }}>
           <Typography
             sx={{
-              color: 'yellow',
+              color: linkFontColor,
               textDecoration: 'none',
-              '&:hover': { color: '#FFBF00', transform: 'scale(1.1)' },
+              '&:hover': { color: linkFontColorHover, transform: 'scale(1.1)' },
             }}
             component={Link}
             to="/functions"
@@ -197,10 +199,10 @@ function NavBar() {
             Functions
           </Typography>
         </ListItem>
-        <ListItem>
+        <ListItem sx={{ py: '0' }}>
           <Typography
             sx={{
-              color: 'yellow',
+              color: linkFontColor,
               textDecoration: 'none',
               '&:hover': { color: '#FFBF00', transform: 'scale(1.1)' },
             }}
