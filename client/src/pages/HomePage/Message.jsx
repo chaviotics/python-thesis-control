@@ -8,7 +8,7 @@ function Message() {
         sx={{ textAlign: 'center', pt: '2rem', mb: '5rem' }}
         variant="h3"
       >
-        Message from Researcher
+        Message from the Researcher
       </Typography>
       <Typography variant="body1">
         Dear Isko/Iska,

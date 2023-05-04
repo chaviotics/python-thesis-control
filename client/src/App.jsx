@@ -103,7 +103,7 @@ function App() {
         <CssBaseline />
 
         {/* NavBar is for dev purposes */}
-        {/* <NavBar /> */}
+        <NavBar />
 
         {/* Toggle Light/Dark Mode */}
         <IconButton
