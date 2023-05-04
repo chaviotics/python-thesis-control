@@ -131,7 +131,7 @@ function TypeFunc() {
   return (
     <Container>
       <Typography mt="7rem" textAlign="center" variant="h2">
-        <code>Type()</code> Function
+        <code>type()</code> Function
       </Typography>
       <Typography sx={{ mt: '2rem', mb: '1rem' }}>
         In Python, you can check of the type of the value by using the built-in

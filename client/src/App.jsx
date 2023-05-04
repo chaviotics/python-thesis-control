@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import HomePage from './pages/HomePage/HomePage';
+import './App.css';
 import { Link, Routes, Route } from 'react-router-dom';
 import {
   Box,
@@ -11,6 +11,7 @@ import {
 import { Brightness4, Brightness7 } from '@mui/icons-material';
 
 // Pages
+import HomePage from './pages/HomePage/HomePage';
 import WhatIsPython from './pages/Introduction/WhatIsPython';
 import HelloWorld from './pages/Introduction/HelloWorld';
 import Comment from './pages/Introduction/Comment';

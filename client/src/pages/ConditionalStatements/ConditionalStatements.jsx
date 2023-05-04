@@ -188,8 +188,8 @@ function CodeOutput1() {
           overflow: 'auto',
         }}
       >
-        <Typography>
-          <code>You are old enough to vote.</code>
+        <Typography fontFamily="monospace">
+          You are old enough to vote.
         </Typography>
       </Box>
     </Box>
@@ -240,8 +240,8 @@ function CodeOutput2() {
           overflow: 'auto',
         }}
       >
-        <Typography>
-          <code>You are not old enough to vote.</code>
+        <Typography fontFamily="monospace">
+          You are not old enough to vote.
         </Typography>
       </Box>
     </Box>
@@ -294,8 +294,8 @@ function CodeOutput3() {
           overflow: 'auto',
         }}
       >
-        <Typography>
-          <code>You are an adult but not old enough to drink.</code>
+        <Typography fontFamily="monospace">
+          You are an adult but not old enough to drink.
         </Typography>
       </Box>
     </Box>
