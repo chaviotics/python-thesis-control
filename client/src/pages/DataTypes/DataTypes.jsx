@@ -63,6 +63,7 @@ function DataTypesList() {
             sx={{
               p: '3rem',
               transition: 'all 0.2s',
+              color: '#0b3c53',
               '&:hover': {
                 transform: 'scale(1.1)',
               },
@@ -113,7 +114,7 @@ print(type(3.14)) # prints out <class 'float'>, meaning 3.14 is a float
 print(type(True)) # prints out <class 'bool'>, meaning True is a boolean`;
 
   return (
-    <Box sx={{ height: '340px' }}>
+    <Box sx={{ height: '220px' }}>
       <Editor
         theme="vs-dark"
         defaultLanguage="python"
@@ -121,6 +122,7 @@ print(type(True)) # prints out <class 'bool'>, meaning True is a boolean`;
         options={{
           fontSize: '20px',
           readOnly: true,
+          scrollBeyondLastLine: false,
         }}
       />
     </Box>
@@ -131,7 +133,7 @@ function TypeFunc() {
   return (
     <Container>
       <Typography mt="7rem" textAlign="center" variant="h2">
-        <code>Type()</code> Function
+        <code>type()</code> Function
       </Typography>
       <Typography sx={{ mt: '2rem', mb: '1rem' }}>
         In Python, you can check of the type of the value by using the built-in

@@ -45,6 +45,7 @@ name = "Alice"
           options={{
             fontSize: '20px',
             readOnly: true,
+            scrollBeyondLastLine: false,
           }}
         />
       </Box>
@@ -82,6 +83,7 @@ print(type(name))
           options={{
             fontSize: '20px',
             readOnly: true,
+            scrollBeyondLastLine: false,
           }}
         />
       </Box>
@@ -100,12 +102,8 @@ print(type(name))
             overflow: 'auto',
           }}
         >
-          <Typography>
-            <code>{`<class 'int'>`}</code>
-          </Typography>
-          <Typography>
-            <code>{`<class 'str'>`}</code>
-          </Typography>
+          <Typography fontFamily="monospace">{`<class 'int'>`}</Typography>
+          <Typography fontFamily="monospace">{`<class 'str'>`}</Typography>
         </Box>
       </Box>
     </Container>

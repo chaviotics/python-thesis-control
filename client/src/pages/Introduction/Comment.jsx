@@ -53,6 +53,7 @@ print("Hello awesome person!") # This line prints a greeting to the console
         options={{
           fontSize: '20px',
           readOnly: true,
+          scrollBeyondLastLine: false,
         }}
       />
     </Box>
@@ -65,6 +66,17 @@ function IDE() {
       <Box width={'100%'} height={'250px'}>
         <CodeEditor />
       </Box>
+    </Container>
+  );
+}
+
+function NoteForScroll() {
+  return (
+    <Container>
+      <Typography fontSize="75%" mt="2rem" fontStyle="italic">
+        Note: If you're having trouble scrolling down, place your mouse cursor
+        outside the code editor and scroll as normal.
+      </Typography>
     </Container>
   );
 }
@@ -115,6 +127,7 @@ function Comment() {
     >
       <IntroHeading />
       <IDE />
+      <NoteForScroll />
       <Proceed />
     </Container>
   );

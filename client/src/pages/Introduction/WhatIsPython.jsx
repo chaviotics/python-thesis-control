@@ -77,7 +77,7 @@ function CompareWithTable() {
       <Box
         sx={{
           display: 'flex',
-          backgroundColor: '#3f51b5',
+          backgroundColor: '#3081c3',
           color: '#fff',
           fontWeight: 'bold',
           border: '1px solid #ddd',

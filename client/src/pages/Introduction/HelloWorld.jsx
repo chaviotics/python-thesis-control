@@ -42,6 +42,7 @@ function CodeEditor() {
         options={{
           fontSize: '20px',
           readOnly: true,
+          scrollBeyondLastLine: false,
         }}
       />
     </Box>
@@ -63,15 +64,9 @@ function OutputBox() {
           overflow: 'auto',
         }}
       >
-        <Typography>
-          <code>Hello, World!</code>
-        </Typography>
-        <Typography>
-          <code>3</code>
-        </Typography>
-        <Typography>
-          <code>False</code>
-        </Typography>
+        <Typography fontFamily="monospace">Hello, World!</Typography>
+        <Typography fontFamily="monospace">3</Typography>
+        <Typography fontFamily="monospace">False</Typography>
       </Box>
     </Box>
   );

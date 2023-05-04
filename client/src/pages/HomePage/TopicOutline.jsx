@@ -52,6 +52,7 @@ function TopicOutline(props, ref) {
               textAlign: 'center',
               p: 4,
               transition: 'all 0.2s',
+              color: '#0b3c53',
               '&:hover': {
                 transform: 'scale(1.1)',
               },

@@ -140,6 +140,7 @@ function CodeSyntax() {
         options={{
           fontSize: '20px',
           readOnly: true,
+          scrollBeyondLastLine: false,
         }}
       />
     </Box>
@@ -166,6 +167,7 @@ if age >= 18:
         options={{
           fontSize: '20px',
           readOnly: true,
+          scrollBeyondLastLine: false,
         }}
       />
     </Box>
@@ -188,8 +190,8 @@ function CodeOutput1() {
           overflow: 'auto',
         }}
       >
-        <Typography>
-          <code>You are old enough to vote.</code>
+        <Typography fontFamily="monospace">
+          You are old enough to vote.
         </Typography>
       </Box>
     </Box>
@@ -218,6 +220,7 @@ function CodeExample2() {
         options={{
           fontSize: '20px',
           readOnly: true,
+          scrollBeyondLastLine: false,
         }}
       />
     </Box>
@@ -240,8 +243,8 @@ function CodeOutput2() {
           overflow: 'auto',
         }}
       >
-        <Typography>
-          <code>You are not old enough to vote.</code>
+        <Typography fontFamily="monospace">
+          You are not old enough to vote.
         </Typography>
       </Box>
     </Box>
@@ -272,6 +275,7 @@ else:
         options={{
           fontSize: '20px',
           readOnly: true,
+          scrollBeyondLastLine: false,
         }}
       />
     </Box>
@@ -294,8 +298,8 @@ function CodeOutput3() {
           overflow: 'auto',
         }}
       >
-        <Typography>
-          <code>You are an adult but not old enough to drink.</code>
+        <Typography fontFamily="monospace">
+          You are an adult but not old enough to drink.
         </Typography>
       </Box>
     </Box>

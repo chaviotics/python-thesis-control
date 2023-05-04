@@ -83,7 +83,7 @@ print(3 ** 2) # Output: 9
       <Typography mt="1rem" mb="1rem">
         Here are some examples of how to perform these operations:
       </Typography>
-      <Box sx={{ height: '700px' }}>
+      <Box sx={{ height: '640px' }}>
         <Editor
           theme="vs-dark"
           defaultLanguage="python"
@@ -91,6 +91,7 @@ print(3 ** 2) # Output: 9
           options={{
             fontSize: '20px',
             readOnly: true,
+            scrollBeyondLastLine: false,
           }}
         />
       </Box>
