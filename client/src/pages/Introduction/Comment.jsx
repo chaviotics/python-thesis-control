@@ -70,6 +70,17 @@ function IDE() {
   );
 }
 
+function NoteForScroll() {
+  return (
+    <Container>
+      <Typography fontSize="75%" mt="2rem" fontStyle="italic">
+        Note: If you're having trouble scrolling down, place your mouse cursor
+        outside the code editor and scroll as normal.
+      </Typography>
+    </Container>
+  );
+}
+
 function Proceed() {
   const handleProceed = () => {
     window.scrollTo(0, 0);
@@ -116,6 +127,7 @@ function Comment() {
     >
       <IntroHeading />
       <IDE />
+      <NoteForScroll />
       <Proceed />
     </Container>
   );
