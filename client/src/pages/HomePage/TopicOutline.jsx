@@ -20,7 +20,7 @@ function TopicOutline(props, ref) {
       sx={{
         display: 'flex',
         flexDirection: 'column',
-        pt: '7rem',
+        pt: '10vh',
         mb: '7rem',
       }}
       ref={ref}
@@ -53,14 +53,20 @@ function TopicOutline(props, ref) {
               p: 4,
               transition: 'all 0.2s',
               color: '#0b3c53',
-              '&:hover': {
-                transform: 'scale(1.1)',
-              },
             }}
             elevation={3}
             key={topic.id}
           >
-            <Typography>{topic.title}</Typography>
+            <Typography
+              sx={{
+                transition: 'all 0.2s',
+                '&:hover': {
+                  transform: 'scale(1.1)',
+                },
+              }}
+            >
+              {topic.title}
+            </Typography>
           </Paper>
         ))}
       </Box>
