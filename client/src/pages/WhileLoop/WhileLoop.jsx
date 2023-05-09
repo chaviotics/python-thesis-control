@@ -166,7 +166,7 @@ function MainContent() {
 }
 
 function CodeSyntax() {
-  const code = `while condition:
+  const code = `while condition_is_true:
   # code to be executed as long as the condition is True
   # take note of the indentation
 `;

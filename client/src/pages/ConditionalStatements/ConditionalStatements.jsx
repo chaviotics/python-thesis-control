@@ -129,7 +129,7 @@ function MainContent() {
 }
 
 function CodeSyntax() {
-  const code = `if condition:
+  const code = `if condition_is_true:
   # run this code if the condition is True
   # take note of the indentation
 `;
@@ -205,10 +205,10 @@ function CodeOutput1() {
 
 function CodeExample2() {
   const code = `age = 15
-  if age >= 18:
-      print("You are old enough to vote.")
-  else:
-      print("You are not old enough to vote.")
+if age >= 18:
+    print("You are old enough to vote.")
+else:
+    print("You are not old enough to vote.")
 `;
 
   return (
