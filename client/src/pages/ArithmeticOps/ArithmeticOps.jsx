@@ -38,8 +38,10 @@ function IntroHeading() {
         <List>
           {operations.map((op) => (
             <ListItem key={op.id}>
-              {'➤ '} {op.operation} {` ( `}
-              <code>{op.operator}</code> {' ) '}
+              <Typography>
+                {'‣ '} {op.operation} {` ( `}
+                <code>{op.operator}</code> {' ) '}
+              </Typography>
             </ListItem>
           ))}
         </List>
