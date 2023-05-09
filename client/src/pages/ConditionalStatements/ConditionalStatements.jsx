@@ -1,7 +1,8 @@
 import React from 'react';
-import { Box, Container, Typography, Button, Paper } from '@mui/material';
-import { Link } from 'react-router-dom';
+import { Box, Container, Typography } from '@mui/material';
 import Editor from '@monaco-editor/react';
+import Proceed from '../../components/Proceed';
+import NoteForScroll from '../../components/NoteForScroll';
 
 function MainContent() {
   return (
@@ -31,6 +32,8 @@ function MainContent() {
         </Typography>
 
         <CodeSyntax />
+
+        <NoteForScroll />
 
         {/* 1st Example */}
 
@@ -126,7 +129,7 @@ function MainContent() {
 }
 
 function CodeSyntax() {
-  const code = `if condition:
+  const code = `if condition_is_true:
   # run this code if the condition is True
   # take note of the indentation
 `;
@@ -202,10 +205,10 @@ function CodeOutput1() {
 
 function CodeExample2() {
   const code = `age = 15
-  if age >= 18:
-      print("You are old enough to vote.")
-  else:
-      print("You are not old enough to vote.")
+if age >= 18:
+    print("You are old enough to vote.")
+else:
+    print("You are not old enough to vote.")
 `;
 
   return (
@@ -306,41 +309,6 @@ function CodeOutput3() {
   );
 }
 
-function Proceed() {
-  const handleProceed = () => {
-    window.scrollTo(0, 0);
-  };
-
-  return (
-    <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-      <Button
-        component={Link}
-        sx={{ alignSelf: 'center', width: '25%', mt: '5rem' }}
-        size="large"
-        variant="contained"
-        to="/forloop"
-        onClick={handleProceed}
-      >
-        Proceed
-      </Button>
-      <Typography
-        sx={{
-          fontSize: 'small',
-          fontStyle: 'italic',
-          textAlign: 'center',
-          mt: '.5rem',
-          mb: '7rem',
-        }}
-      >
-        Note: You cannot go back to the previous page once you proceed to the
-        next. <br />
-        Please take your time and review the material carefully before moving
-        forward.
-      </Typography>
-    </Box>
-  );
-}
-
 function ConditionalStatements() {
   return (
     <Container
@@ -351,7 +319,7 @@ function ConditionalStatements() {
       }}
     >
       <MainContent />
-      <Proceed />
+      <Proceed linkTo="/lists" />
     </Container>
   );
 }

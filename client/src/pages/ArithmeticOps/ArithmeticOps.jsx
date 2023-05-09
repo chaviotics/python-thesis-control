@@ -1,24 +1,17 @@
 import React from 'react';
-import {
-  Box,
-  Container,
-  Typography,
-  Button,
-  Paper,
-  List,
-  ListItem,
-} from '@mui/material';
-import { Link } from 'react-router-dom';
+import { Box, Container, Typography, List, ListItem } from '@mui/material';
 import Editor from '@monaco-editor/react';
+import Proceed from '../../components/Proceed';
+import NoteForScroll from '../../components/NoteForScroll';
 
 const operations = [
-  { id: 1, operation: `Addition (+)` },
-  { id: 2, operation: `Subtraction (-)` },
-  { id: 3, operation: `Multiplication (*)` },
-  { id: 4, operation: `Division (/)` },
-  { id: 5, operation: `Floor Division (//)` },
-  { id: 6, operation: `Modulo (%)` },
-  { id: 7, operation: `Exponentiation (**)` },
+  { id: 1, operation: `Addition`, operator: `+` },
+  { id: 2, operation: `Subtraction`, operator: `-` },
+  { id: 3, operation: `Multiplication`, operator: `*` },
+  { id: 4, operation: `Division`, operator: `/` },
+  { id: 5, operation: `Floor Division`, operator: `//` },
+  { id: 6, operation: `Modulo`, operator: `%` },
+  { id: 7, operation: `Exponentiation`, operator: `**` },
 ];
 
 function IntroHeading() {
@@ -45,8 +38,8 @@ function IntroHeading() {
         <List>
           {operations.map((op) => (
             <ListItem key={op.id}>
-              {'➤ '}
-              {op.operation}
+              {'➤ '} {op.operation} {` ( `}
+              <code>{op.operator}</code> {' ) '}
             </ListItem>
           ))}
         </List>
@@ -80,10 +73,11 @@ print(3 ** 2) # Output: 9
 
   return (
     <Container>
-      <Typography mt="1rem" mb="1rem">
+      <Typography mt="1rem">
         Here are some examples of how to perform these operations:
       </Typography>
-      <Box sx={{ height: '640px' }}>
+      <NoteForScroll />
+      <Box sx={{ mt: '1rem', height: '640px' }}>
         <Editor
           theme="vs-dark"
           defaultLanguage="python"
@@ -99,41 +93,6 @@ print(3 ** 2) # Output: 9
   );
 }
 
-function Proceed() {
-  const handleProceed = () => {
-    window.scrollTo(0, 0);
-  };
-
-  return (
-    <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-      <Button
-        component={Link}
-        sx={{ alignSelf: 'center', width: '25%', mt: '5rem' }}
-        size="large"
-        variant="contained"
-        to="/conditionals"
-        onClick={handleProceed}
-      >
-        Proceed
-      </Button>
-      <Typography
-        sx={{
-          fontSize: 'small',
-          fontStyle: 'italic',
-          textAlign: 'center',
-          mt: '.5rem',
-          mb: '7rem',
-        }}
-      >
-        Note: You cannot go back to the previous page once you proceed to the
-        next. <br />
-        Please take your time and review the material carefully before moving
-        forward.
-      </Typography>
-    </Box>
-  );
-}
-
 function ArithmeticOps() {
   return (
     <Container
@@ -145,7 +104,7 @@ function ArithmeticOps() {
     >
       <IntroHeading />
       <CodeEditor />
-      <Proceed />
+      <Proceed linkTo="/conditionals" />
     </Container>
   );
 }

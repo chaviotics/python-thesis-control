@@ -1,7 +1,7 @@
 import React from 'react';
-import { Box, Container, Typography, Button } from '@mui/material';
+import { Box, Container, Typography } from '@mui/material';
 import Editor from '@monaco-editor/react';
-import { Link } from 'react-router-dom';
+import Proceed from '../../components/Proceed';
 
 function IntroHeading() {
   return (
@@ -101,41 +101,6 @@ function PrintExplanation() {
   );
 }
 
-function Proceed() {
-  const handleProceed = () => {
-    window.scrollTo(0, 0);
-  };
-
-  return (
-    <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-      <Button
-        component={Link}
-        sx={{ alignSelf: 'center', width: '25%', mt: '5rem' }}
-        size="large"
-        variant="contained"
-        to="/intro/comment"
-        onClick={handleProceed}
-      >
-        Proceed
-      </Button>
-      <Typography
-        sx={{
-          fontSize: 'small',
-          fontStyle: 'italic',
-          textAlign: 'center',
-          mt: '.5rem',
-          mb: '7rem',
-        }}
-      >
-        Note: You cannot go back to the previous page once you proceed to the
-        next. <br />
-        Please take your time and review the material carefully before moving
-        forward.
-      </Typography>
-    </Box>
-  );
-}
-
 function HelloWorld() {
   return (
     <Container
@@ -148,7 +113,7 @@ function HelloWorld() {
       <IntroHeading />
       <IDE />
       <PrintExplanation />
-      <Proceed />
+      <Proceed linkTo="/intro/comment" />
     </Container>
   );
 }

@@ -1,5 +1,42 @@
 import React from 'react';
-import { Container, Box } from '@mui/material';
+import { Container, Box, Typography } from '@mui/material';
+
+function MainContent() {
+  return (
+    <Container
+      sx={{
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+      }}
+    >
+      {/* Intro */}
+      <Typography variant="h4" fontWeight="bold">
+        Assessment
+      </Typography>
+      <Typography variant="h2">Python Post-Test</Typography>
+
+      <Typography mt="2rem" mb="1rem">
+        Congratulations on completing the entire Python Tutorial! I hope you had
+        fun while learning a lot of different concepts in Python. Below will be
+        an embedded Google Forms wherein you will answer the post-test. Just
+        scroll down to however it is comfortable for you. Good luck!
+      </Typography>
+
+      <Typography mt="1rem" mb="2rem">
+        Just a few notes. To scroll down in the embedded Google Form, place your
+        mouse cursor inside its container. After taking the test, you may exit
+        by closing this tab on your browser.
+      </Typography>
+
+      {/* Google Form */}
+      <Box sx={{ width: '80%', height: '100vh', bgcolor: '#f5f5f5' }}>
+        <GoogleForm />
+      </Box>
+    </Container>
+  );
+}
 
 function GoogleForm() {
   return (
@@ -18,10 +55,14 @@ function GoogleForm() {
 
 function Quiz() {
   return (
-    <Container>
-      <Box sx={{ width: '100%', height: '100vh', bgcolor: '#f5f5f5' }}>
-        <GoogleForm />
-      </Box>
+    <Container
+      sx={{
+        mt: '64px',
+        display: 'flex',
+        flexDirection: 'column',
+      }}
+    >
+      <MainContent />
     </Container>
   );
 }

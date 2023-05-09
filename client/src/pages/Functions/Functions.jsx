@@ -1,9 +1,9 @@
 import React from 'react';
-import { Box, Container, Typography, Button, Paper } from '@mui/material';
-import { Link } from 'react-router-dom';
+import { Box, Container, Typography } from '@mui/material';
 import Editor from '@monaco-editor/react';
+import Proceed from '../../components/Proceed';
 
-function IntroHeading() {
+function MainContent() {
   return (
     <Container
       sx={{
@@ -13,80 +13,95 @@ function IntroHeading() {
         justifyContent: 'center',
       }}
     >
+      {/* Title */}
       <Typography variant="h4" fontWeight="bold">
         FUNCTIONS
       </Typography>
       <Typography variant="h2">Functions</Typography>
 
       <Box sx={{ mt: '2rem', alignSelf: 'flex-start' }}>
+        {/* Introduction */}
         <Typography>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta dolorum
-          commodi dolore velit atque modi quam error beatae autem sequi
-          reiciendis obcaecati, omnis eaque, aliquid, repellendus molestiae?
-          Animi, ratione itaque.
+          Functions are a way to group a block of code that can be reused
+          multiple times throughout your program. Functions are essential to
+          code reusability, as they allow you to avoid writing the same code
+          over and over again.
         </Typography>
+
+        {/* Syntax */}
+        <Typography variant="h4" fontWeight="bold" mt="2rem">
+          Syntax
+        </Typography>
+
+        <Typography>The syntax of a function looks like this:</Typography>
+        <Code
+          code={`def function_name(parameter1, parameter2):
+    # code to be executed
+    return result`}
+          height="200px"
+          width="100%"
+        />
+
+        {/*  */}
+
+        {/*  */}
+
+        {/*  */}
       </Box>
     </Container>
   );
 }
 
-function CodeEditor() {
-  const code = `y = "hello"
-print(type(y)) # prints out <class 'str'>, meaning y is a string
-
-z = 3.14
-print(type(z)) # prints out <class 'float'>, meaning z is a float
-
-w = True
-print(type(w)) # prints out <class 'bool'>, meaning w is a boolean
-`;
+function Code(props) {
+  const code = props.code;
 
   return (
-    <Box sx={{ height: '340px' }}>
-      <Editor
-        theme="vs-dark"
-        defaultLanguage="python"
-        value={code}
-        options={{
-          fontSize: '20px',
-          readOnly: true,
-        }}
-      />
+    <Box sx={{ width: props.width }}>
+      <Typography variant="h5" pb="0.5rem">
+        Code Editor
+      </Typography>
+
+      <Box sx={{ height: props.height }}>
+        <Editor
+          theme="vs-dark"
+          defaultLanguage="python"
+          value={code}
+          options={{
+            fontSize: '20px',
+            readOnly: true,
+            scrollBeyondLastLine: false,
+          }}
+        />
+      </Box>
     </Box>
   );
 }
 
-function Proceed() {
-  const handleProceed = () => {
-    window.scrollTo(0, 0);
-  };
-
+function CodeOutput(props) {
+  const output = props.output;
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-      <Button
-        component={Link}
-        sx={{ alignSelf: 'center', width: '25%', mt: '5rem' }}
-        size="large"
-        variant="contained"
-        to="/quiz"
-        onClick={handleProceed}
-      >
-        Proceed
-      </Button>
-      <Typography
+    <Box sx={{ width: props.width }}>
+      <Typography variant="h5" pb="0.5rem">
+        Output
+      </Typography>
+      <Box
         sx={{
-          fontSize: 'small',
-          fontStyle: 'italic',
-          textAlign: 'center',
-          mt: '.5rem',
-          mb: '7rem',
+          height: props.height,
+          border: '1px solid #ccc',
+          borderRadius: '4px',
+          minHeight: '120px',
+          p: '0.5rem',
+          overflow: 'auto',
         }}
       >
-        Note: You cannot go back to the previous page once you proceed to the
-        next. <br />
-        Please take your time and review the material carefully before moving
-        forward.
-      </Typography>
+        <Typography
+          fontFamily="monospace"
+          component="div"
+          sx={{ whiteSpace: 'pre-line' }}
+        >
+          {output}
+        </Typography>
+      </Box>
     </Box>
   );
 }
@@ -100,9 +115,9 @@ function Functions() {
         flexDirection: 'column',
       }}
     >
-      <IntroHeading />
+      <MainContent />
 
-      <Proceed />
+      <Proceed linkTo="/quiz" />
     </Container>
   );
 }

@@ -20,8 +20,8 @@ function TopicOutline(props, ref) {
       sx={{
         display: 'flex',
         flexDirection: 'column',
-        pt: '7rem',
-        height: '100vh',
+        pt: '10vh',
+        mb: '7rem',
       }}
       ref={ref}
     >
@@ -40,7 +40,7 @@ function TopicOutline(props, ref) {
           display: 'grid',
           gridTemplateColumns: 'repeat(4, 200px)',
           gap: '32px',
-          mb: 7,
+          mb: 5,
         }}
       >
         {topics.map((topic) => (
@@ -53,20 +53,26 @@ function TopicOutline(props, ref) {
               p: 4,
               transition: 'all 0.2s',
               color: '#0b3c53',
-              '&:hover': {
-                transform: 'scale(1.1)',
-              },
             }}
             elevation={3}
             key={topic.id}
           >
-            <Typography>{topic.title}</Typography>
+            <Typography
+              sx={{
+                transition: 'all 0.2s',
+                '&:hover': {
+                  transform: 'scale(1.1)',
+                },
+              }}
+            >
+              {topic.title}
+            </Typography>
           </Paper>
         ))}
       </Box>
       <Typography
         sx={{
-          fontSize: 'small',
+          fontSize: 'medium',
           fontStyle: 'italic',
           textAlign: 'center',
           mt: '1rem',

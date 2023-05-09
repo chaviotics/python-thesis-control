@@ -1,7 +1,8 @@
 import React from 'react';
-import { Box, Container, Typography, Button } from '@mui/material';
+import { Box, Container, Typography } from '@mui/material';
 import Editor from '@monaco-editor/react';
-import { Link } from 'react-router-dom';
+import Proceed from '../../components/Proceed';
+import NoteForScroll from '../../components/NoteForScroll';
 
 function IntroHeading() {
   return (
@@ -62,57 +63,12 @@ print("Hello awesome person!") # This line prints a greeting to the console
 
 function IDE() {
   return (
-    <Container sx={{ mt: '1rem', display: 'flex', flexDirection: 'row' }}>
+    <Container sx={{ mt: '1rem', display: 'flex', flexDirection: 'column' }}>
       <Box width={'100%'} height={'250px'}>
         <CodeEditor />
       </Box>
+      <NoteForScroll />
     </Container>
-  );
-}
-
-function NoteForScroll() {
-  return (
-    <Container>
-      <Typography fontSize="75%" mt="2rem" fontStyle="italic">
-        Note: If you're having trouble scrolling down, place your mouse cursor
-        outside the code editor and scroll as normal.
-      </Typography>
-    </Container>
-  );
-}
-
-function Proceed() {
-  const handleProceed = () => {
-    window.scrollTo(0, 0);
-  };
-
-  return (
-    <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-      <Button
-        component={Link}
-        sx={{ alignSelf: 'center', width: '25%', mt: '5rem' }}
-        size="large"
-        variant="contained"
-        to="/datatypes"
-        onClick={handleProceed}
-      >
-        Proceed
-      </Button>
-      <Typography
-        sx={{
-          fontSize: 'small',
-          fontStyle: 'italic',
-          textAlign: 'center',
-          mt: '.5rem',
-          mb: '7rem',
-        }}
-      >
-        Note: You cannot go back to the previous page once you proceed to the
-        next. <br />
-        Please take your time and review the material carefully before moving
-        forward.
-      </Typography>
-    </Box>
   );
 }
 
@@ -127,8 +83,7 @@ function Comment() {
     >
       <IntroHeading />
       <IDE />
-      <NoteForScroll />
-      <Proceed />
+      <Proceed linkTo="/datatypes" />
     </Container>
   );
 }

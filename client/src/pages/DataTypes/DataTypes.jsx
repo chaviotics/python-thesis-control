@@ -11,6 +11,7 @@ import {
 import { Link } from 'react-router-dom';
 import Editor from '@monaco-editor/react';
 import dataTypesList from './basicDataTypes';
+import Proceed from '../../components/Proceed';
 
 function IntroHeading() {
   return (
@@ -64,9 +65,6 @@ function DataTypesList() {
               p: '3rem',
               transition: 'all 0.2s',
               color: '#0b3c53',
-              '&:hover': {
-                transform: 'scale(1.1)',
-              },
             }}
           >
             <Typography
@@ -144,41 +142,6 @@ function TypeFunc() {
   );
 }
 
-function Proceed() {
-  const handleProceed = () => {
-    window.scrollTo(0, 0);
-  };
-
-  return (
-    <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-      <Button
-        component={Link}
-        sx={{ alignSelf: 'center', width: '25%', mt: '5rem' }}
-        size="large"
-        variant="contained"
-        to="/variables"
-        onClick={handleProceed}
-      >
-        Proceed
-      </Button>
-      <Typography
-        sx={{
-          fontSize: 'small',
-          fontStyle: 'italic',
-          textAlign: 'center',
-          mt: '.5rem',
-          mb: '7rem',
-        }}
-      >
-        Note: You cannot go back to the previous page once you proceed to the
-        next. <br />
-        Please take your time and review the material carefully before moving
-        forward.
-      </Typography>
-    </Box>
-  );
-}
-
 function DataTypes() {
   return (
     <Container
@@ -191,7 +154,7 @@ function DataTypes() {
       <IntroHeading />
       <DataTypesList />
       <TypeFunc />
-      <Proceed />
+      <Proceed linkTo="/variables" />
     </Container>
   );
 }
