@@ -5,13 +5,13 @@ import Proceed from '../../components/Proceed';
 import NoteForScroll from '../../components/NoteForScroll';
 
 const operations = [
-  { id: 1, operation: `Addition (+)` },
-  { id: 2, operation: `Subtraction (-)` },
-  { id: 3, operation: `Multiplication (*)` },
-  { id: 4, operation: `Division (/)` },
-  { id: 5, operation: `Floor Division (//)` },
-  { id: 6, operation: `Modulo (%)` },
-  { id: 7, operation: `Exponentiation (**)` },
+  { id: 1, operation: `Addition`, operator: `+` },
+  { id: 2, operation: `Subtraction`, operator: `-` },
+  { id: 3, operation: `Multiplication`, operator: `*` },
+  { id: 4, operation: `Division`, operator: `/` },
+  { id: 5, operation: `Floor Division`, operator: `//` },
+  { id: 6, operation: `Modulo`, operator: `%` },
+  { id: 7, operation: `Exponentiation`, operator: `**` },
 ];
 
 function IntroHeading() {
@@ -38,8 +38,8 @@ function IntroHeading() {
         <List>
           {operations.map((op) => (
             <ListItem key={op.id}>
-              {'➤ '}
-              {op.operation}
+              {'➤ '} {op.operation} {` ( `}
+              <code>{op.operator}</code> {' ) '}
             </ListItem>
           ))}
         </List>
