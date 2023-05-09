@@ -84,7 +84,7 @@ function DataTypesList() {
               {dataType.examples.map((example, index) => (
                 <ListItem key={index}>
                   <Typography>
-                    {'➤ '}
+                    {'‣ '}
                     {example}
                   </Typography>
                 </ListItem>
@@ -97,8 +97,8 @@ function DataTypesList() {
         These data types are fundamental building blocks of Python programs and
         are used extensively in many different applications. In addition to
         these basic data types, Python also has more complex data types such as
-        lists, tuples, dictionaries, sets, and more. But that’s another topic
-        for another time 😊
+        lists, tuples, dictionaries, sets, and more. But that’s a topic for
+        another time 😊
       </Typography>
     </Container>
   );

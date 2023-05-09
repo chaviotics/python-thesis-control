@@ -21,7 +21,7 @@ function TopicOutline(props, ref) {
         display: 'flex',
         flexDirection: 'column',
         pt: '10vh',
-        mb: '7rem',
+        mb: '25vh',
       }}
       ref={ref}
     >
