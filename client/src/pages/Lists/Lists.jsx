@@ -234,7 +234,7 @@ function Lists() {
     >
       <MainContent />
 
-      <Proceed linkTo="/forloop" />
+      <Proceed linkTo="/whileloop" />
     </Container>
   );
 }

@@ -24,8 +24,8 @@ import Variable from './pages/Variables/Variable';
 import ArithmeticOps from './pages/ArithmeticOps/ArithmeticOps';
 import ConditionalStatements from './pages/ConditionalStatements/ConditionalStatements';
 import Lists from './pages/Lists/Lists';
-import ForLoop from './pages/ForLoop/ForLoop';
 import WhileLoop from './pages/WhileLoop/WhileLoop';
+import ForLoop from './pages/ForLoop/ForLoop';
 import Functions from './pages/Functions/Functions';
 
 function NavBar() {
@@ -168,9 +168,9 @@ function NavBar() {
               '&:hover': { color: linkFontColorHover, transform: 'scale(1.1)' },
             }}
             component={Link}
-            to="/forloop"
+            to="/whileloop"
           >
-            For Loop
+            While Loop
           </Typography>
         </ListItem>
         <ListItem sx={{ py: '0' }}>
@@ -181,9 +181,9 @@ function NavBar() {
               '&:hover': { color: linkFontColorHover, transform: 'scale(1.1)' },
             }}
             component={Link}
-            to="/whileloop"
+            to="/forloop"
           >
-            While Loop
+            For Loop
           </Typography>
         </ListItem>
         <ListItem sx={{ py: '0' }}>
@@ -275,8 +275,8 @@ function App() {
           <Route path="/arithmeticops" element={<ArithmeticOps />} />
           <Route path="/conditionals" element={<ConditionalStatements />} />
           <Route path="/lists" element={<Lists />} />
-          <Route path="/forloop" element={<ForLoop />} />
           <Route path="/whileloop" element={<WhileLoop />} />
+          <Route path="/forloop" element={<ForLoop />} />
           <Route path="/functions" element={<Functions />} />
           <Route path="/quiz" element={<Quiz />} />
         </Routes>

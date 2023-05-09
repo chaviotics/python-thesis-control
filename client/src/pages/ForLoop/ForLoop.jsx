@@ -67,7 +67,7 @@ function ForLoop() {
     >
       <IntroHeading />
 
-      <Proceed linkTo="/whileloop" />
+      <Proceed linkTo="/functions" />
     </Container>
   );
 }
