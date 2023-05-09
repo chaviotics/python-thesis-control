@@ -173,15 +173,16 @@ print(result)
           height="320px"
           width="100%"
         />
+        <Typography mt="1rem">
+          In the example above, the <code>sum_list()</code> function takes a list
+          of numbers as input and returns the sum of those numbers. The code then
+          creates a list of numbers and stores it in the <code>my_numbers</code>{' '}
+          variable. The function is called with the <code>my_numbers</code> list
+          as an argument, and the result is stored in the <code>result</code>{' '}
+          variable. Finally, the sum of the list is printed to the console.
+        </Typography>
       </Box>
-      <Typography mt="1rem">
-        In the example above, the <code>sum_list()</code> function takes a list
-        of numbers as input and returns the sum of those numbers. The code then
-        creates a list of numbers and stores it in the <code>my_numbers</code>{' '}
-        variable. The function is called with the <code>my_numbers</code> list
-        as an argument, and the result is stored in the <code>result</code>{' '}
-        variable. Finally, the sum of the list is printed to the console.
-      </Typography>
+      
     </Container>
   );
 }
