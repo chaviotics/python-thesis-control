@@ -33,7 +33,7 @@ function MainContent() {
 
         <CodeSyntax />
 
-        <NoteForScroll />
+        {/* <NoteForScroll /> */}
 
         {/* 1st Example */}
 

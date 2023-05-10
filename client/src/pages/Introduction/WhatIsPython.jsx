@@ -197,9 +197,7 @@ function CompareWithC() {
   return (
     <Container>
       <CompareWithCIntro />
-      <Typography mt="1rem" fontSize="85%" fontStyle="italic" pl="4rem">
-        Note: You don't have to memorize their differences.
-      </Typography>
+
       <CompareWithTable />
       <CompareWithCOutro />
     </Container>

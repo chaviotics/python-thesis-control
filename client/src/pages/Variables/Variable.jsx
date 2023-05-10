@@ -51,8 +51,7 @@ name = "Alice"
         />
       </Box>
 
-      <NoteForScroll />
-
+      {/* <NoteForScroll /> */}
       <Typography mt="2rem">
         When you assign a value to a variable, Python{' '}
         <strong>

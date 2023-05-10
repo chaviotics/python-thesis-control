@@ -21,21 +21,23 @@ function Message() {
         <br />
         Please keep in mind that your scores are anonymous and that there is no
         grading involved in this tutorial. I simply want you to learn at your
-        own pace and have fun.
+        own pace and have fun 😊.
         <br />
         <br />
-        Additionally, please be aware that once you proceed to the next section,
-        you will not be able to go back. Please take your time and review the
-        material carefully before moving forward.
+        Additionally, please be aware that{' '}
+        <strong>
+          <u>
+            once you proceed to the next section, you will not be able to go
+            back
+          </u>
+        </strong>
+        . Please take your time and review the material carefully before moving
+        forward.
         <br />
         <br />
         Moreover, try not to go to other tabs on your browser while taking this
-        tutorial. You can full screen your web browser, by pressing{' '}
-        <code>F11</code>.
-        <br />
-        <br />
-        If you want to change to dark/light mode, press the button at the upper
-        right of the website.
+        tutorial. To maximize your experience, you can full screen your web
+        browser, by pressing <code>F11</code>.
         <br />
         <br />
         I appreciate your time and effort in participating in this research.

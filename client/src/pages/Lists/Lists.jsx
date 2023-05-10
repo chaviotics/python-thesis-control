@@ -29,7 +29,7 @@ function MainContent() {
         </Typography>
         <CodeSyntax />
 
-        <NoteForScroll />
+        {/* <NoteForScroll /> */}
 
         {/* List Order Example */}
         <Typography mt="2rem" mb="1rem">

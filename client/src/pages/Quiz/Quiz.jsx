@@ -20,20 +20,14 @@ function MainContent() {
       <Typography mt="2rem" mb="1rem">
         Congratulations on completing the entire Python Tutorial! I hope you had
         fun while learning a lot of different concepts in Python. Below will be
-        an embedded Google Forms wherein you will answer the post-test. Just
-        scroll down to however it is comfortable for you. Good luck!
+        an embedded Google Forms wherein you will answer the post-test. Good
+        luck!
       </Typography>
 
       <Typography mt="1rem" mb="1rem">
-        Just a few notes. To scroll down in the embedded Google Form, place your
-        mouse cursor inside its container. After taking the test, you may exit
-        by closing this tab on your browser.
-      </Typography>
-
-      <Typography mt="1rem" mb="4rem">
         Please use your UP Mail in answering the form. If you're encountering
-        problems regarding the embedded Google Form below for the post-test, you
-        can click on this button →{' '}
+        problems regarding the embedded Google Form below, you can click on this
+        button to open another tab for the post-test →{' '}
         <Button
           variant="contained"
           size="small"
@@ -43,6 +37,12 @@ function MainContent() {
         >
           Post-Test Python
         </Button>
+      </Typography>
+
+      <Typography mt="1rem" mb="4rem">
+        A few notes to remember: you can scroll down in the embedded Google Form
+        by placing your mouse cursor inside its container, and you may exit by
+        closing this tab on your browser.
       </Typography>
 
       {/* Google Form */}
