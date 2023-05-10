@@ -1,5 +1,6 @@
 import React from 'react';
-import { Container, Typography, Button } from '@mui/material';
+import { Container, Typography, Button, Box } from '@mui/material';
+import pythonLogo from '../../assets/python-logo.svg';
 
 function Intro(props) {
   return (
@@ -18,7 +19,7 @@ function Intro(props) {
         fontWeight="regular"
       >
         Welcome to this <br />
-        Interactive Python Tutorial
+        Introductory Python Tutorial!
       </Typography>
 
       <Button

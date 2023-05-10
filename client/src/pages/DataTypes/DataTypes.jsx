@@ -65,6 +65,7 @@ function DataTypesList() {
               p: '3rem',
               transition: 'all 0.2s',
               color: '#0b3c53',
+              cursor: 'default',
             }}
           >
             <Typography

@@ -4,10 +4,10 @@ import { Container, Typography, Box, Paper } from '@mui/material';
 const topics = [
   { id: 1, title: 'Introduction to Python' },
   { id: 2, title: 'Arithmetic Operations' },
-  { id: 3, title: 'Variables' },
-  { id: 4, title: 'Data Types' },
-  { id: 5, title: 'Input/Output' },
-  { id: 6, title: 'Control Structures' },
+  { id: 3, title: 'Data Types' },
+  { id: 4, title: 'Variables' },
+  // { id: 5, title: 'Input/Output' },
+  { id: 6, title: 'Conditional Statements' },
   { id: 7, title: 'Data Structures' },
   { id: 8, title: 'For Loops' },
   { id: 9, title: 'While Loops' },
@@ -38,7 +38,7 @@ function TopicOutline(props, ref) {
         sx={{
           alignSelf: 'center',
           display: 'grid',
-          gridTemplateColumns: 'repeat(4, 200px)',
+          gridTemplateColumns: 'repeat(3, 200px)',
           gap: '32px',
           mb: 5,
         }}
@@ -59,6 +59,7 @@ function TopicOutline(props, ref) {
           >
             <Typography
               sx={{
+                cursor: 'default',
                 transition: 'all 0.2s',
                 '&:hover': {
                   transform: 'scale(1.1)',

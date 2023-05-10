@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Box, Typography } from '@mui/material';
+import { Container, Box, Typography, Button } from '@mui/material';
 
 function MainContent() {
   return (
@@ -24,10 +24,25 @@ function MainContent() {
         scroll down to however it is comfortable for you. Good luck!
       </Typography>
 
-      <Typography mt="1rem" mb="2rem">
+      <Typography mt="1rem" mb="1rem">
         Just a few notes. To scroll down in the embedded Google Form, place your
         mouse cursor inside its container. After taking the test, you may exit
         by closing this tab on your browser.
+      </Typography>
+
+      <Typography mt="1rem" mb="4rem">
+        Please use your UP Mail in answering the form. If you're encountering
+        problems regarding the embedded Google Form below for the post-test, you
+        can click on this button →{' '}
+        <Button
+          variant="contained"
+          size="small"
+          href="https://forms.gle/KCdsGf9T1LHyALGL7"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          Post-Test Python
+        </Button>
       </Typography>
 
       {/* Google Form */}
@@ -44,9 +59,6 @@ function GoogleForm() {
       src="https://docs.google.com/forms/d/e/1FAIpQLSePTnJ5fzzJIgr5oR2rOOXal1pQ1KDSsyRlHaM7KO3Qy9fsFQ/viewform?embedded=true"
       width="100%"
       height="100%"
-      frameborder="0"
-      marginheight="0"
-      marginwidth="0"
     >
       Loading…
     </iframe>
