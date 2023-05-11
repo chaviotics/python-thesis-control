@@ -72,6 +72,7 @@ function TopicOutline(props, ref) {
           </Paper>
         ))}
       </Box>
+
       <Typography
         sx={{
           fontSize: 'medium',
