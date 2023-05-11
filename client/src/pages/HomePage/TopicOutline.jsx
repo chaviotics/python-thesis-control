@@ -8,7 +8,7 @@ const topics = [
   { id: 4, title: 'Variables' },
   // { id: 5, title: 'Input/Output' },
   { id: 6, title: 'Conditional Statements' },
-  { id: 7, title: 'Data Structures' },
+  { id: 7, title: 'Lists' },
   { id: 8, title: 'For Loops' },
   { id: 9, title: 'While Loops' },
   { id: 10, title: 'Functions' },
@@ -29,7 +29,7 @@ function TopicOutline(props, ref) {
         TOPICS
       </Typography>
       <Typography sx={{ textAlign: 'center', mb: 3 }}>
-        This interactive tutorial will teach you the basics of Python
+        This introductory Python tutorial will teach you the basics of Python
         programming. Here, you will learn the concepts of:
       </Typography>
 
@@ -38,7 +38,7 @@ function TopicOutline(props, ref) {
         sx={{
           alignSelf: 'center',
           display: 'grid',
-          gridTemplateColumns: 'repeat(3, 200px)',
+          gridTemplateColumns: 'repeat(3, 250px)',
           gap: '32px',
           mb: 5,
         }}
@@ -50,7 +50,7 @@ function TopicOutline(props, ref) {
               alignItems: 'center',
               justifyContent: 'center',
               textAlign: 'center',
-              p: 4,
+              p: '2.5rem',
               transition: 'all 0.2s',
               color: '#0b3c53',
             }}
@@ -59,10 +59,11 @@ function TopicOutline(props, ref) {
           >
             <Typography
               sx={{
+                fontSize: '20px',
                 cursor: 'default',
                 transition: 'all 0.2s',
                 '&:hover': {
-                  transform: 'scale(1.1)',
+                  transform: 'scale(1.2)',
                 },
               }}
             >
