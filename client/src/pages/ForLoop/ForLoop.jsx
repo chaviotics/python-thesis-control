@@ -25,7 +25,7 @@ function ForLoop() {
         {/* Introduction */}
         <Typography mb="1rem">
           In Python, a <code>for</code> loop is used to iterate over a sequence
-          of elements, such as a list, or a string. The syntax for a{' '}
+          of elements, such as a list or a string. The syntax for a{' '}
           <code>for</code> loop is as follows:
         </Typography>
 
@@ -36,6 +36,7 @@ function ForLoop() {
 `}
           height="150px"
           width="100%"
+          title="true"
         />
 
         <Typography mt="2rem" mb="4rem">
@@ -70,8 +71,14 @@ function ForLoop() {
   print(i)`}
             height="180px"
             width="50%"
+            title="true"
           />
-          <CodeOutput content={`0\n1\n2\n3\n4`} height="180px" width="50%" />
+          <CodeOutput
+            content={`0\n1\n2\n3\n4`}
+            height="180px"
+            width="50%"
+            title="true"
+          />
         </Box>
         <Typography mt="2rem">
           In this example, we use the <code>range()</code> function to generate
@@ -102,11 +109,13 @@ for fruit in fruits:
     print(fruit)`}
             height="180px"
             width="55%"
+            title="true"
           />
           <CodeOutput
             content={`apple\nbanana\ncherry`}
             height="180px"
             width="45%"
+            title="true"
           />
         </Box>
         <Typography mt="2rem">
@@ -135,8 +144,14 @@ for letter in word:
     print(letter)`}
             height="220px"
             width="50%"
+            title="true"
           />
-          <CodeOutput content={`P\ny\nt\nh\no\nn`} height="220px" width="50%" />
+          <CodeOutput
+            content={`P\ny\nt\nh\no\nn`}
+            height="220px"
+            width="50%"
+            title="true"
+          />
         </Box>
         <Typography mt="2rem">
           In this example, we use a for loop to iterate over each character in
@@ -184,6 +199,7 @@ for fruit in fruits:
         break`}
             height="220px"
             width="80%"
+            title="true"
           />
           <CodeOutput
             content={`apple
@@ -192,6 +208,7 @@ cherry
 grapes`}
             height="220px"
             width="20%"
+            title="true"
           />
         </Box>
 
@@ -223,13 +240,14 @@ grapes`}
         >
           <CodeEditor
             content={`fruits = ['apple', 'banana', 'cherry', 'grapes', 'orange']
-            
+
 for fruit in fruits:
     print(fruit)
     if fruit == 'cherry':
         continue`}
             height="220px"
             width="80%"
+            title="true"
           />
           <CodeOutput
             content={`apple
@@ -238,6 +256,7 @@ grapes
 orange`}
             height="220px"
             width="20%"
+            title="true"
           />
         </Box>
 

@@ -27,7 +27,7 @@ function Lists() {
           A list in Python is an ordered collection of items, which can be of
           any type (numbers, strings, other lists, etc.). Lists are created
           using square brackets <code>[]</code> and items are separated by
-          commas. The general syntax is:
+          commas <code>,</code>. The general syntax is:
         </Typography>
 
         <CodeEditor
@@ -67,7 +67,7 @@ function Lists() {
         </Box>
 
         <Typography mt="4rem">
-          The example below shows lists of single data type elements:
+          The example below shows a lists of single data type elements:
         </Typography>
 
         <CodeEditor
@@ -120,7 +120,9 @@ print(mixed_list)
 
         <Typography mb="1rem">
           Let's say we want to choose the first element of the{' '}
-          <code>fruits</code> list, which is <code>apple</code>.
+          <code>fruits</code> list, which is <code>apple</code>. Take note that
+          the index of the first element is <code>0</code> of the list. We would
+          do it like this:
         </Typography>
 
         <Box
@@ -151,7 +153,8 @@ print(mixed_list)
 
         <Typography mt="4rem" mb="1rem">
           Lists are mutable, which means that you can change the items in a list
-          after it has been created.
+          after it has been created. In this case, we are changing the 2nd
+          element, <code>banana</code>, to <code>orange</code>.
         </Typography>
 
         <Box
@@ -185,7 +188,9 @@ print(fruits)
         {/* append() */}
         <Typography mt="4rem" mb="1rem">
           Items can be added in the list by using the <code>append()</code>{' '}
-          method.
+          method. Here, we are adding <code>grapes</code> to our{' '}
+          <code>fruits</code> list containing <code>apple</code> and{' '}
+          <code>banana</code>.
         </Typography>
 
         <Box
@@ -219,7 +224,9 @@ print(fruits)
         {/* len() */}
         <Typography mt="2rem" mb="1rem">
           You can get the size of the list (how many items in the list) by using
-          the <code>len()</code> method.
+          the <code>len()</code> method. You just place the <code>fruits</code>{' '}
+          list inside the <code>len()</code> method, and place that inside a{' '}
+          <code>print()</code> to see its output.
         </Typography>
 
         <Box

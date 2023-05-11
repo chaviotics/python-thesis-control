@@ -30,7 +30,7 @@ function WhileLoop() {
         </Typography>
 
         <CodeEditor
-          content={`while condition_is_true:
+          content={`while condition == True:
     # code to be executed as long as the condition is True
     # take note of the indentation
     `}
@@ -38,10 +38,11 @@ function WhileLoop() {
           width="100%"
         />
 
-        <Typography mt="1rem" mb="1rem">
-          In the code above, <code>condition</code> is a boolean expression that
-          is evaluated before each iteration of the loop. The loop continues to
-          run as long as the condition remains <code>True</code>.
+        <Typography mt="2rem" mb="1rem">
+          In the code above, <code>condition</code> is a boolean
+          variable/expression that is evaluated before each iteration of the
+          loop. The loop continues to run as long as the condition remains{' '}
+          <code>True</code>.
         </Typography>
 
         {/* Code Example 1 */}
@@ -89,8 +90,8 @@ while count < 5:
           Within the loop, the current value of <code>count</code> is printed
           using the
           <code>print()</code> function, and then count is incremented by 1
-          using the += operator. This process repeats until count reaches a
-          value of 5, at which point the loop exits.
+          using the <code>+=</code> operator. This process repeats until count
+          reaches a value of 5, at which point the loop exits.
         </Typography>
 
         {/* Infinite Loop */}

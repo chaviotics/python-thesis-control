@@ -25,13 +25,14 @@ function Comment() {
         {/* Introduction */}
         <Typography>
           Comments in Python are notes that you add to your code to explain what
-          it does. They are ignored by the computer when the code is run, but
+          it does. They are ignored by the computer when the code is ran, but
           they help you and others understand what your code is doing.
         </Typography>
         <Typography mt="2rem" mb="1rem">
-          In Python, you can add a comment by starting a line with the # symbol.
-          Everything after the # symbol on that line will be treated as a
-          comment. Check out the code editor below:
+          In Python, you can add a comment by starting a line with the{' '}
+          <code>#</code> symbol. Everything after the <code>#</code> symbol on
+          that line will be treated as a comment. Check out the code editor
+          below:
         </Typography>
       </Box>
 

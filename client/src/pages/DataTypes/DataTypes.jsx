@@ -93,7 +93,8 @@ function DataTypes() {
         {/* Introduction */}
         <Typography>
           In Python, there are several different kinds of data, or "types", that
-          you can work with. Some of the most common ones include:
+          you can work with. Some of the most common and basic data types
+          include:
         </Typography>
 
         {/* Data Types List */}
@@ -113,7 +114,7 @@ function DataTypes() {
         </Typography>
 
         <Typography mt="2rem" mb="1rem">
-          In Python, you can check of the type of the value by using the
+          In Python, you can check the data type of the value by using the
           built-in function <code>type()</code>.{' '}
         </Typography>
 

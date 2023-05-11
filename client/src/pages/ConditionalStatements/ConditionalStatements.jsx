@@ -20,7 +20,9 @@ function ConditionalStatements() {
       <Typography variant="h4" fontWeight="bold">
         CONDITIONAL STATEMENTS
       </Typography>
-      <Typography variant="h2">if-elif-else Statements</Typography>
+      <Typography variant="h2">
+        <code>if</code>-<code>else</code> Statements
+      </Typography>
 
       <Box sx={{ width: '100%', mt: '2rem', alignSelf: 'flex-start' }}>
         {/* Introduction */}
@@ -36,7 +38,7 @@ function ConditionalStatements() {
         </Typography>
 
         <CodeEditor
-          content={`if condition_is_true:
+          content={`if condition == True:
     # run this code if the condition is True
     # take note of the indentation
 `}
@@ -44,16 +46,25 @@ function ConditionalStatements() {
           width="100%"
         />
 
-        {/* <NoteForScroll /> */}
-
-        {/* 1st Example */}
-        <Typography mt="2rem" mb="4rem">
+        <Typography mt="2rem" mb="2rem">
           Here, <code>condition</code> is a expression that evaluates to either{' '}
           <code>True</code> or <code>False</code>. If the <code>condition</code>{' '}
           is <code>True</code>, the code indented under the <code>if</code>{' '}
           statement will be executed. If it's <code>False</code>, the indented
           code will be skipped.
         </Typography>
+
+        <Typography mt="2rem" mb="4rem" fontStyle="italic">
+          <strong>Note:</strong> The <code>==</code> operator is a comparison
+          operator that checks whether two values are equal. When the{' '}
+          <code>==</code> operator is used, it returns a Boolean value of{' '}
+          <code>True</code> if the values being compared are equal, and{' '}
+          <code>False</code> if they are not equal.
+        </Typography>
+
+        {/* <NoteForScroll /> */}
+
+        {/* 1st Example */}
 
         <Typography>For example:</Typography>
 
@@ -135,7 +146,7 @@ else:
         {/* 3rd Example */}
         <Typography>
           Also, you can even add multiple conditions using <code>elif</code>{' '}
-          statements:
+          (Python's version of "else if") statements:
         </Typography>
 
         <Box

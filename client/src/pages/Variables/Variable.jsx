@@ -26,8 +26,8 @@ function Variable() {
         <Typography>
           A variable in Python is like a box where you can store values. Think
           of it like a label for the data you put inside. To create a variable,
-          you give it a name and assign a value to it using the equals sign (=).
-          For example:
+          you give it a name and assign a value to it using the equals sign ({' '}
+          <code>=</code> ). For example:
         </Typography>
 
         <Box
@@ -105,9 +105,9 @@ print(type(name))
         </Box>
 
         <Typography mt="4rem" mb="1rem">
-          What if, we can place in expressions such as variables in our{' '}
+          What if we can place in expressions such as variables in our{' '}
           <code>print()</code> statements? Now knowing about variables, let's
-          upgrade our knowledge with the concept{' '}
+          upgrade our knowledge of <code>print()</code> with the concept{' '}
           <strong>Formatted Strings</strong>!
         </Typography>
 

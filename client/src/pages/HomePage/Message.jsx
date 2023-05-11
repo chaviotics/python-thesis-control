@@ -24,15 +24,14 @@ function Message() {
         own pace and have fun 😊.
         <br />
         <br />
-        Additionally, please be aware that{' '}
         <strong>
           <u>
-            once you proceed to the next section, you will not be able to go
-            back
+            Once you proceed to the next section, please DO NOT go back to the
+            previous page
           </u>
         </strong>
-        . Please take your time and review the material carefully before moving
-        forward.
+        , as it is essential for this research. Please take your time and review
+        the material carefully before moving forward.
         <br />
         <br />
         Moreover, try not to go to other tabs on your browser while taking this
