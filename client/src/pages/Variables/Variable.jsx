@@ -43,7 +43,7 @@ function Variable() {
             content={`age = 10
 print(age)
 
-name = "Alice"
+name = "Isaac"
 print(name)`}
             height="220px"
             width="50%"
@@ -51,7 +51,7 @@ print(name)`}
           />
 
           <CodeOutput
-            content={`10\nAlice`}
+            content={`10\nIsaac`}
             height="220px"
             width="50%"
             title="true"
@@ -88,8 +88,9 @@ print(name)`}
             content={`age = 10
 print(type(age))
 
-name = "Alice"
-print(type(name))`}
+name = "Isaac"
+print(type(name))
+`}
             height="220px"
             width="50%"
             title="true"
@@ -102,6 +103,85 @@ print(type(name))`}
             title="true"
           />
         </Box>
+
+        <Typography mt="4rem" mb="1rem">
+          What if, we can place in expressions such as variables in our{' '}
+          <code>print()</code> statements? Now knowing about variables, let's
+          upgrade our knowledge with the concept{' '}
+          <strong>Formatted Strings</strong>!
+        </Typography>
+
+        {/* Formatted Strings */}
+        <Typography mt="4rem" textAlign="center" variant="h3">
+          Formatted Strings
+        </Typography>
+
+        <Typography mt="2rem" mb="1rem">
+          Formatted strings, also known as f-strings, are a feature in Python
+          3.6 and later versions that allow for easy string formatting. They
+          start with the letter "<code>f</code>" and include curly braces{' '}
+          <code>{`{}`}</code> containing expressions that are evaluated at
+          runtime and then formatted into the string.
+        </Typography>
+
+        <Typography mt="2rem" mb="1rem" fontStyle="italic">
+          In Python, an{' '}
+          <u>
+            <strong>expression</strong>
+          </u>{' '}
+          is a combination of values, variables, operators, and function calls
+          that evaluates to a single value.
+        </Typography>
+
+        <Typography mt="2rem" mb="1rem">
+          For example, consider the following code:
+        </Typography>
+
+        <Box
+          sx={{
+            mt: '1rem',
+            mb: '1rem',
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '1rem',
+          }}
+        >
+          <CodeEditor
+            content={`name = "Isaac"
+age = 25
+print(f"My name is {name} and I am {age} years old.")
+`}
+            height="150px"
+            width="100%"
+            title="true"
+          />
+
+          <Typography mt="1rem" mb="1rem">
+            In code above, the f-string is used to embed the variables{' '}
+            <code>name</code> and <code>age</code> within the string. The
+            expressions inside the curly braces are evaluated at runtime and the
+            resulting values are formatted into the string.
+          </Typography>
+
+          <Typography mt="1rem" mb="rem">
+            When the code is executed, the output will be:
+          </Typography>
+
+          <CodeOutput
+            content={`My name is Isaac and I am 25 years old.`}
+            height="150px"
+            width="100%"
+            title="true"
+          />
+        </Box>
+
+        <Typography mt="4rem">
+          Formatted strings can also include expressions that call functions or
+          perform arithmetic operations, making it easy to create complex
+          strings with dynamic content. Overall, formatted strings provide a
+          concise and readable way to insert variable values into a string in
+          Python.
+        </Typography>
       </Box>
 
       <Proceed linkTo="/arithmeticops" />

@@ -112,7 +112,7 @@ function DataTypes() {
           The <code>type()</code> Function
         </Typography>
 
-        <Typography sx={{ mt: '2rem', mb: '1rem' }}>
+        <Typography mt="2rem" mb="1rem">
           In Python, you can check of the type of the value by using the
           built-in function <code>type()</code>.{' '}
         </Typography>

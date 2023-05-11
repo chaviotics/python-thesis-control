@@ -83,42 +83,76 @@ function Functions() {
         <Typography variant="h4" mt="4rem" mb="1rem">
           Arguments and Parameters
         </Typography>
+
         <Typography mb="1rem">
           Parameters are the inputs that the function can accept, while
           arguments are the actual values passed to the function when it is
-          called. In the example below, a and b are parameters while{' '}
-          <code>1</code> and <code>2</code> are the arguments:
+          called. In the example below, <code>a</code> and <code>b</code> are
+          parameters (line 1) while <code>1</code> and <code>2</code> (line 4)
+          are the arguments:
         </Typography>
-        <CodeEditor
-          content={`def add_numbers(a, b):
+
+        <Box
+          sx={{
+            mt: '1rem',
+            mb: '1rem',
+            display: 'flex',
+            flexDirection: 'row',
+            gap: '1rem',
+          }}
+        >
+          <CodeEditor
+            content={`def add_numbers(a, b):
     return a + b
 
 result = add_numbers(1, 2)
-print(result) # Output: 3
+print(result)
     `}
-          height="200px"
-          width="100%"
-        />
+            height="200px"
+            width="50%"
+            title="true"
+          />
+          <CodeOutput content={`3`} height="200px" width="50%" title="true" />
+        </Box>
 
         {/* Function with no return */}
         <Typography variant="h4" mt="4rem" mb="1rem">
           Functions without the <code>return</code> Statement
         </Typography>
+
         <Typography mb="1rem">
           If you don't want your function to return a value, you can simply omit
           the <code>return</code> statement. The example below shows a function
           that prints a message to the console:
         </Typography>
-        <CodeEditor
-          content={`def print_message():
+
+        <Box
+          sx={{
+            mt: '1rem',
+            mb: '1rem',
+            display: 'flex',
+            flexDirection: 'row',
+            gap: '1rem',
+          }}
+        >
+          <CodeEditor
+            content={`def print_message():
     print("Hello, world!")
 
 print_message()
-# Output: Hello, world!
-    `}
-          height="200px"
-          width="100%"
-        />
+`}
+            height="200px"
+            width="50%"
+            title="true"
+          />
+
+          <CodeOutput
+            content={`Hello, world!`}
+            height="200px"
+            width="50%"
+            title="true"
+          />
+        </Box>
 
         {/* Other Examples */}
         <Typography variant="h4" mt="4rem" mb="1rem">
@@ -256,7 +290,7 @@ print(result2)
 
         <Typography mt="2rem">
           I hope the last two examples highlight the modularity of functions,
-          wherein we don't have to repeat writing the same code, and just call
+          wherein we don't have to repeat writing the same code, and only call
           them when we need them.
         </Typography>
       </Box>

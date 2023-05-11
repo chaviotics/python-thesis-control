@@ -26,8 +26,8 @@ function Lists() {
         <Typography mb="1rem">
           A list in Python is an ordered collection of items, which can be of
           any type (numbers, strings, other lists, etc.). Lists are created
-          using square brackets [] and items are separated by commas. The
-          general syntax is:
+          using square brackets <code>[]</code> and items are separated by
+          commas. The general syntax is:
         </Typography>
 
         <CodeEditor
@@ -66,8 +66,52 @@ function Lists() {
           />
         </Box>
 
+        <Typography mt="4rem">
+          The example below shows lists of single data type elements:
+        </Typography>
+
+        <CodeEditor
+          content={`list_of_numbers = [1, 3, 420, 69, 5]
+list_of_floats = [1.0, 1.1, 6.9, 4.20, 42.0]
+list_of_booleans = [True, False, False, True, True]
+`}
+          height="120px"
+          width="100%"
+        />
+
+        <Typography mt="4rem">
+          However, we can also have a list of different data type elements like
+          this:
+        </Typography>
+
+        <Box
+          sx={{
+            mt: '1rem',
+            mb: '4rem',
+            display: 'flex',
+            flexDirection: 'row',
+            gap: '1rem',
+          }}
+        >
+          <CodeEditor
+            content={`mixed_list = [1, "Isaac", 3.69, True]
+
+print(mixed_list)
+`}
+            height="120px"
+            width="60%"
+            title="true"
+          />
+          <CodeOutput
+            content={`[1, 'Isaac', 3.69, True]`}
+            height="120px"
+            width="40%"
+            title="true"
+          />
+        </Box>
+
         {/* List Order Example */}
-        <Typography mt="2rem" mb="4rem">
+        <Typography mt="4rem" mb="4rem">
           Lists are ordered, which means that the items have a defined order and
           can be accessed using an index, starting from 0 for the first item.
           The syntax for accessing a specific item in a list is:{' '}
