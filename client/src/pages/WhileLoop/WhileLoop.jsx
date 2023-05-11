@@ -136,10 +136,11 @@ while count > 0:
         </Typography>
 
         <Typography mt="2rem" mb="1rem">
-          The variable count is initialized to 1, and then a while loop is used
-          to check if the value of count is greater than 0. Since 1 is always
-          greater than 0, the condition is always true, and the loop will
-          continue to execute indefinitely.
+          The variable <code>count</code> is initialized to 1, and then a{' '}
+          <code>while</code> loop is used to check if the value of{' '}
+          <code>count</code> is greater than 0. Since 1 is always greater than
+          0, the condition is always true, and the loop will continue to execute
+          indefinitely.
         </Typography>
 
         <Typography mt="2rem" mb="1rem">
@@ -166,10 +167,10 @@ while count > 0:
           The <code>break</code> Statement
         </Typography>
         <Typography mt="1rem" mb="2rem">
-          When executed inside a loop, the break statement causes the loop to
-          terminate immediately and the control is transferred to the next
-          statement outside the loop. It is commonly used to exit a loop when a
-          certain condition is met.
+          When executed inside a loop, the <code>break</code> statement causes
+          the loop to terminate immediately and the control is transferred to
+          the next statement outside the loop. It is commonly used to exit a
+          loop when a certain condition is met.
         </Typography>
 
         <Typography mt="1rem" mb="1rem">

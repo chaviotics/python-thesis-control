@@ -28,7 +28,7 @@ function Proceed(props) {
           mb: '7rem',
         }}
       >
-        Reminders: Please do not go back to the previous page.
+        Reminders: Please <strong>DO NOT</strong> go back to the previous page.
         <br />
         Take your time and review the material carefully before moving forward.
       </Typography>
