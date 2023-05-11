@@ -1,25 +1,29 @@
 import React from 'react';
 import { Box, Container, Typography } from '@mui/material';
-import Editor from '@monaco-editor/react';
+import CodeEditor from '../../components/CodeEditor';
+import CodeOutput from '../../components/CodeOutput';
 import Proceed from '../../components/Proceed';
 import NoteForScroll from '../../components/NoteForScroll';
 
-function MainContent() {
+function ConditionalStatements() {
   return (
     <Container
       sx={{
+        mt: '64px',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
       }}
     >
+      {/* Title */}
       <Typography variant="h4" fontWeight="bold">
         CONDITIONAL STATEMENTS
       </Typography>
-      <Typography variant="h2">Conditional Statements</Typography>
+      <Typography variant="h2">if-elif-else Statements</Typography>
 
-      <Box sx={{ mt: '2rem', alignSelf: 'flex-start' }}>
+      <Box sx={{ width: '100%', mt: '2rem', alignSelf: 'flex-start' }}>
+        {/* Introduction */}
         <Typography>
           Conditional statements (<em>also called if-else statements</em>) allow
           you to control the flow of your program based on certain conditions.
@@ -31,13 +35,19 @@ function MainContent() {
           The basic syntax of a conditional statement in Python is as follows:
         </Typography>
 
-        <CodeSyntax />
+        <CodeEditor
+          content={`if condition_is_true:
+    # run this code if the condition is True
+    # take note of the indentation
+`}
+          height="150px"
+          width="100%"
+        />
 
         {/* <NoteForScroll /> */}
 
         {/* 1st Example */}
-
-        <Typography mt="1rem" mb="2rem">
+        <Typography mt="2rem" mb="4rem">
           Here, <code>condition</code> is a expression that evaluates to either{' '}
           <code>True</code> or <code>False</code>. If the <code>condition</code>{' '}
           is <code>True</code>, the code indented under the <code>if</code>{' '}
@@ -49,19 +59,30 @@ function MainContent() {
 
         <Box
           sx={{
-            height: '150px',
             mt: '1rem',
-            mb: '4rem',
+            mb: '2rem',
             display: 'flex',
             flexDirection: 'row',
             gap: '1rem',
           }}
         >
-          <CodeExample1 />
-          <CodeOutput1 />
+          <CodeEditor
+            content={`age = 20
+if age >= 18:
+    print("You are old enough to vote.")`}
+            height="150px"
+            width="60%"
+            title="true"
+          />
+          <CodeOutput
+            content={`You are old enough to vote.`}
+            height="150px"
+            width="40%"
+            title="true"
+          />
         </Box>
 
-        <Typography mb="2rem">
+        <Typography mb="4rem">
           In the example above, the <code>condition</code>{' '}
           <code>age &gt;= 18</code> checks if the value of <code>age</code> is
           greater than or equal to 18. If it is, the code inside the{' '}
@@ -77,19 +98,35 @@ function MainContent() {
 
         <Box
           sx={{
-            height: '200px',
             mt: '1rem',
-            mb: '4rem',
+            mb: '2rem',
             display: 'flex',
             flexDirection: 'row',
             gap: '1rem',
           }}
         >
-          <CodeExample2 />
-          <CodeOutput2 />
+          {/* <CodeExample2 />
+          <CodeOutput2 /> */}
+          <CodeEditor
+            content={`age = 15
+if age >= 18:
+    print("You are old enough to vote.")
+else:
+    print("You are not old enough to vote.")
+`}
+            height="200px"
+            width="65%"
+            title="true"
+          />
+          <CodeOutput
+            content={`You are not old enough to vote.`}
+            height="200px"
+            width="35%"
+            title="true"
+          />
         </Box>
 
-        <Typography mb="2rem">
+        <Typography mb="4rem">
           In the example above, if the value of <code>age</code> is greater than
           or equal to 18, the first message will be printed. If not, the second
           message will be printed.
@@ -100,20 +137,39 @@ function MainContent() {
           Also, you can even add multiple conditions using <code>elif</code>{' '}
           statements:
         </Typography>
+
         <Box
           sx={{
             mt: '1rem',
             mb: '2rem',
             display: 'flex',
             flexDirection: 'column',
-            gap: '2rem',
+            gap: '1rem',
           }}
         >
-          <CodeExample3 />
-          <CodeOutput3 />
+          <CodeEditor
+            content={`age = 20
+if age < 18:
+    print("You are a minor.")
+elif age >= 18 and age < 21:
+    print("You are an adult but not old enough to drink.")
+else:
+    print("You are an adult and can drink.")
+`}
+            height="250px"
+            width="100%"
+            title="true"
+          />
+
+          <CodeOutput
+            content={`You are an adult but not old enough to drink.`}
+            height="150px"
+            width="100%"
+            title="true"
+          />
         </Box>
 
-        <Typography mb="2rem">
+        <Typography mb="4rem">
           In the example above, the code checks multiple conditions to determine
           the age group of the person. Depending on the result of these
           conditions, different messages will be printed.
@@ -124,201 +180,7 @@ function MainContent() {
           <code>not</code> logical operators in conditional statements.
         </Typography>
       </Box>
-    </Container>
-  );
-}
 
-function CodeSyntax() {
-  const code = `if condition_is_true:
-  # run this code if the condition is True
-  # take note of the indentation
-`;
-
-  return (
-    <Box sx={{ height: '140px' }}>
-      <Editor
-        theme="vs-dark"
-        defaultLanguage="python"
-        value={code}
-        options={{
-          fontSize: '20px',
-          readOnly: true,
-          scrollBeyondLastLine: false,
-        }}
-      />
-    </Box>
-  );
-}
-
-// Code Example 1
-
-function CodeExample1() {
-  const code = `age = 20
-if age >= 18:
-    print("You are old enough to vote.")
-`;
-
-  return (
-    <Box sx={{ height: '100%', width: '60%' }}>
-      <Typography variant="h5" pb="0.5rem">
-        Code Editor
-      </Typography>
-      <Editor
-        theme="vs-dark"
-        defaultLanguage="python"
-        value={code}
-        options={{
-          fontSize: '20px',
-          readOnly: true,
-          scrollBeyondLastLine: false,
-        }}
-      />
-    </Box>
-  );
-}
-
-function CodeOutput1() {
-  return (
-    <Box sx={{ height: '100%', width: '40%' }}>
-      <Typography variant="h5" pb="0.5rem">
-        Output
-      </Typography>
-      <Box
-        sx={{
-          height: '100%',
-          border: '1px solid #ccc',
-          borderRadius: '4px',
-          minHeight: '120px',
-          p: '0.5rem',
-          overflow: 'auto',
-        }}
-      >
-        <Typography fontFamily="monospace">
-          You are old enough to vote.
-        </Typography>
-      </Box>
-    </Box>
-  );
-}
-
-// Code Example 2
-
-function CodeExample2() {
-  const code = `age = 15
-if age >= 18:
-    print("You are old enough to vote.")
-else:
-    print("You are not old enough to vote.")
-`;
-
-  return (
-    <Box sx={{ height: '100%', width: '60%' }}>
-      <Typography variant="h5" pb="0.5rem">
-        Code Editor
-      </Typography>
-      <Editor
-        theme="vs-dark"
-        defaultLanguage="python"
-        value={code}
-        options={{
-          fontSize: '20px',
-          readOnly: true,
-          scrollBeyondLastLine: false,
-        }}
-      />
-    </Box>
-  );
-}
-
-function CodeOutput2() {
-  return (
-    <Box sx={{ height: '100%', width: '40%' }}>
-      <Typography variant="h5" pb="0.5rem">
-        Output
-      </Typography>
-      <Box
-        sx={{
-          height: '100%',
-          border: '1px solid #ccc',
-          borderRadius: '4px',
-          minHeight: '120px',
-          p: '0.5rem',
-          overflow: 'auto',
-        }}
-      >
-        <Typography fontFamily="monospace">
-          You are not old enough to vote.
-        </Typography>
-      </Box>
-    </Box>
-  );
-}
-
-// Code Example 3
-
-function CodeExample3() {
-  const code = `age = 20
-if age < 18:
-    print("You are a minor.")
-elif age >= 18 and age < 21:
-    print("You are an adult but not old enough to drink.")
-else:
-    print("You are an adult and can drink.")
-    `;
-
-  return (
-    <Box sx={{ height: '250px', width: '100%', mb: '2rem' }}>
-      <Typography variant="h5" pb="0.5rem">
-        Code Editor
-      </Typography>
-      <Editor
-        theme="vs-dark"
-        defaultLanguage="python"
-        value={code}
-        options={{
-          fontSize: '20px',
-          readOnly: true,
-          scrollBeyondLastLine: false,
-        }}
-      />
-    </Box>
-  );
-}
-
-function CodeOutput3() {
-  return (
-    <Box sx={{ height: '100%', width: '100%' }}>
-      <Typography variant="h5" pb="0.5rem">
-        Output
-      </Typography>
-      <Box
-        sx={{
-          height: '100%',
-          border: '1px solid #ccc',
-          borderRadius: '4px',
-          minHeight: '120px',
-          p: '0.5rem',
-          overflow: 'auto',
-        }}
-      >
-        <Typography fontFamily="monospace">
-          You are an adult but not old enough to drink.
-        </Typography>
-      </Box>
-    </Box>
-  );
-}
-
-function ConditionalStatements() {
-  return (
-    <Container
-      sx={{
-        mt: '64px',
-        display: 'flex',
-        flexDirection: 'column',
-      }}
-    >
-      <MainContent />
       <Proceed linkTo="/lists" />
     </Container>
   );

@@ -1,12 +1,14 @@
 import React from 'react';
 import { Box, Container, Typography } from '@mui/material';
-import Editor from '@monaco-editor/react';
+import CodeEditor from '../../components/CodeEditor';
+import CodeOutput from '../../components/CodeOutput';
 import Proceed from '../../components/Proceed';
 
-function MainContent() {
+function ForLoop() {
   return (
     <Container
       sx={{
+        mt: '64px',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
@@ -19,21 +21,31 @@ function MainContent() {
       </Typography>
       <Typography variant="h2">For Loop</Typography>
 
-      <Box sx={{ mt: '2rem', alignSelf: 'flex-start' }}>
+      <Box sx={{ width: '100%', mt: '2rem', alignSelf: 'flex-start' }}>
+        {/* Introduction */}
         <Typography mb="1rem">
           In Python, a <code>for</code> loop is used to iterate over a sequence
           of elements, such as a list, or a string. The syntax for a{' '}
           <code>for</code> loop is as follows:
         </Typography>
 
-        <CodeSyntax />
+        <CodeEditor
+          content={`for variable in sequence:
+    # code block to be executed on each iteration
+    # take note of the indentation
+`}
+          height="150px"
+          width="100%"
+        />
 
-        <Typography mt="1rem" mb="1rem">
+        <Typography mt="2rem" mb="4rem">
           In this syntax, <code>variable</code> is a variable name that is
           assigned each element of the <code>sequence</code> on each iteration
           of the loop. The code block inside the loop is executed once for each
           element in the sequence.
         </Typography>
+
+        {/* Examples */}
 
         <Typography mt="2rem" mb="1rem">
           Here are some examples of using for loops in Python:
@@ -53,15 +65,15 @@ function MainContent() {
             gap: '1rem',
           }}
         >
-          <Code
-            code={`for i in range(5):
+          <CodeEditor
+            content={`for i in range(5):
   print(i)`}
             height="180px"
             width="50%"
           />
-          <CodeOutput output={`0\n1\n2\n3\n4`} height="180px" width="50%" />
+          <CodeOutput content={`0\n1\n2\n3\n4`} height="180px" width="50%" />
         </Box>
-        <Typography>
+        <Typography mt="2rem">
           In this example, we use the <code>range()</code> function to generate
           a sequence of numbers from 0 to 4 (because <code>range(5)</code>{' '}
           generates a sequence up to, but not including, 5). The{' '}
@@ -83,20 +95,21 @@ function MainContent() {
             gap: '1rem',
           }}
         >
-          <Code
-            code={`fruits = ['apple', 'banana', 'cherry']
+          <CodeEditor
+            content={`fruits = ['apple', 'banana', 'cherry']
+
 for fruit in fruits:
     print(fruit)`}
             height="180px"
-            width="50%"
+            width="55%"
           />
           <CodeOutput
-            output={`apple\nbanana\ncherry`}
+            content={`apple\nbanana\ncherry`}
             height="180px"
-            width="50%"
+            width="45%"
           />
         </Box>
-        <Typography>
+        <Typography mt="2rem">
           In this example, we create a list of fruit names and use a{' '}
           <code>for</code> loop to iterate over the list and print each fruit
           name.
@@ -115,16 +128,17 @@ for fruit in fruits:
             gap: '1rem',
           }}
         >
-          <Code
-            code={`word = "Python"
+          <CodeEditor
+            content={`word = "Python"
+
 for letter in word:
     print(letter)`}
             height="220px"
             width="50%"
           />
-          <CodeOutput output={`P\ny\nt\nh\no\nn`} height="220px" width="50%" />
+          <CodeOutput content={`P\ny\nt\nh\no\nn`} height="220px" width="50%" />
         </Box>
-        <Typography>
+        <Typography mt="2rem">
           In this example, we use a for loop to iterate over each character in
           the string and print it.
         </Typography>
@@ -161,8 +175,9 @@ for letter in word:
             gap: '1rem',
           }}
         >
-          <Code
-            code={`fruits = ['apple', 'banana', 'cherry', 'grapes', 'orange']
+          <CodeEditor
+            content={`fruits = ['apple', 'banana', 'cherry', 'grapes', 'orange']
+
 for fruit in fruits:
     print(fruit)
     if fruit == 'grapes':
@@ -171,7 +186,7 @@ for fruit in fruits:
             width="80%"
           />
           <CodeOutput
-            output={`apple
+            content={`apple
 banana
 cherry
 grapes`}
@@ -180,7 +195,7 @@ grapes`}
           />
         </Box>
 
-        <Typography mt="1rem" mb="1rem">
+        <Typography mt="2rem" mb="1rem">
           In this example, we create a list of fruit names and use a{' '}
           <code>for</code> loop to iterate over the list and print each fruit
           name. We use the <code>break</code> statement to exit the loop when
@@ -206,8 +221,9 @@ grapes`}
             gap: '1rem',
           }}
         >
-          <Code
-            code={`fruits = ['apple', 'banana', 'cherry', 'grapes', 'orange']
+          <CodeEditor
+            content={`fruits = ['apple', 'banana', 'cherry', 'grapes', 'orange']
+            
 for fruit in fruits:
     print(fruit)
     if fruit == 'cherry':
@@ -216,7 +232,7 @@ for fruit in fruits:
             width="80%"
           />
           <CodeOutput
-            output={`apple
+            content={`apple
 banana
 grapes
 orange`}
@@ -225,104 +241,13 @@ orange`}
           />
         </Box>
 
-        <Typography mt="1rem" mb="1rem">
+        <Typography mt="2rem" mb="1rem">
           In this example, we create a list of fruit names and use a{' '}
           <code>for</code> loop to iterate over the list and print each fruit
           name. We use the <code>continue</code> statement to skip over the
           fruit name 'cherry', so the loop will print all the other fruit names.
         </Typography>
       </Box>
-    </Container>
-  );
-}
-
-function CodeSyntax() {
-  const code = `for variable in sequence:
-  # code block to be executed on each iteration
-  # take note of the indentation
-
-`;
-
-  return (
-    <Box sx={{ height: '150px' }}>
-      <Editor
-        theme="vs-dark"
-        defaultLanguage="python"
-        value={code}
-        options={{
-          fontSize: '20px',
-          readOnly: true,
-          scrollBeyondLastLine: false,
-        }}
-      />
-    </Box>
-  );
-}
-
-function Code(props) {
-  const code = props.code;
-
-  return (
-    <Box sx={{ width: props.width }}>
-      <Typography variant="h5" pb="0.5rem">
-        Code Editor
-      </Typography>
-
-      <Box sx={{ height: props.height }}>
-        <Editor
-          theme="vs-dark"
-          defaultLanguage="python"
-          value={code}
-          options={{
-            fontSize: '20px',
-            readOnly: true,
-            scrollBeyondLastLine: false,
-          }}
-        />
-      </Box>
-    </Box>
-  );
-}
-
-function CodeOutput(props) {
-  const output = props.output;
-  return (
-    <Box sx={{ width: props.width }}>
-      <Typography variant="h5" pb="0.5rem">
-        Output
-      </Typography>
-      <Box
-        sx={{
-          height: props.height,
-          border: '1px solid #ccc',
-          borderRadius: '4px',
-          minHeight: '120px',
-          p: '0.5rem',
-          overflow: 'auto',
-        }}
-      >
-        <Typography
-          fontFamily="monospace"
-          component="div"
-          sx={{ whiteSpace: 'pre-line' }}
-        >
-          {output}
-        </Typography>
-      </Box>
-    </Box>
-  );
-}
-
-function ForLoop() {
-  return (
-    <Container
-      sx={{
-        mt: '64px',
-        display: 'flex',
-        flexDirection: 'column',
-      }}
-    >
-      <MainContent />
 
       <Proceed linkTo="/functions" />
     </Container>

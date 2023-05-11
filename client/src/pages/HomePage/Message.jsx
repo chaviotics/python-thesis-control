@@ -41,7 +41,7 @@ function Message() {
         <br />
         <br />
         I appreciate your time and effort in participating in this research.
-        Your feedback and insights are invaluable to us.
+        Your feedback and insights are invaluable.
         <br />
         <br />
         Once you are ready to proceed, press the button below. Again, do not go

@@ -13,7 +13,6 @@ function CodeOutput(props) {
           height: props.height,
           border: '1px solid #ccc',
           borderRadius: '4px',
-          minHeight: '120px',
           p: '0.5rem',
           overflow: 'auto',
         }}

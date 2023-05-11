@@ -11,7 +11,7 @@ function Proceed(props) {
     <Box sx={{ display: 'flex', flexDirection: 'column' }}>
       <Button
         component={Link}
-        sx={{ alignSelf: 'center', width: '25%', mt: '5rem' }}
+        sx={{ alignSelf: 'center', width: '300px', mt: '5rem' }}
         size="large"
         variant="contained"
         to={props.linkTo}

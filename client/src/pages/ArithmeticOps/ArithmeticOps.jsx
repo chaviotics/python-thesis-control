@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Container, Typography, List, ListItem } from '@mui/material';
-import Editor from '@monaco-editor/react';
+import CodeEditor from '../../components/CodeEditor';
 import Proceed from '../../components/Proceed';
 import NoteForScroll from '../../components/NoteForScroll';
 
@@ -14,27 +14,30 @@ const operations = [
   { id: 7, operation: `Exponentiation`, operator: `**` },
 ];
 
-function IntroHeading() {
+function ArithmeticOps() {
   return (
     <Container
       sx={{
+        mt: '64px',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
       }}
     >
+      {/* Title */}
       <Typography variant="h4" fontWeight="bold">
         ARITHMETIC OPERATIONS
       </Typography>
       <Typography variant="h2">Arithmetic Operations</Typography>
 
-      <Box sx={{ mt: '2rem', alignSelf: 'flex-start' }}>
+      <Box sx={{ width: '100%', mt: '2rem', alignSelf: 'flex-start' }}>
+        {/* Introduction */}
         <Typography>
           In Python, arithmetic operations are performed using the following
           operators:
         </Typography>
-
+        {/* Operators List */}
         <List>
           {operations.map((op) => (
             <ListItem key={op.id}>
@@ -45,13 +48,18 @@ function IntroHeading() {
             </ListItem>
           ))}
         </List>
-      </Box>
-    </Container>
-  );
-}
+        {/* Examples in Code Editor */}
+        <Typography mt="2rem">
+          Here are some examples of how to perform these operations:
+        </Typography>
 
-function CodeEditor() {
-  const code = `# Addition
+        <NoteForScroll />
+
+        {/* Space */}
+        <Typography mt="1rem"></Typography>
+
+        <CodeEditor
+          content={`# Addition
 print(3 + 5) # Output: 8
   
 # Subtraction
@@ -71,41 +79,12 @@ print(10 % 3) # Output: 1
   
 # Exponentiation
 print(3 ** 2) # Output: 9
-`;
-
-  return (
-    <Container>
-      <Typography mt="1rem">
-        Here are some examples of how to perform these operations:
-      </Typography>
-      <NoteForScroll />
-      <Box sx={{ mt: '1rem', height: '640px' }}>
-        <Editor
-          theme="vs-dark"
-          defaultLanguage="python"
-          value={code}
-          options={{
-            fontSize: '20px',
-            readOnly: true,
-            scrollBeyondLastLine: false,
-          }}
+`}
+          height="620px"
+          width="100%"
         />
       </Box>
-    </Container>
-  );
-}
 
-function ArithmeticOps() {
-  return (
-    <Container
-      sx={{
-        mt: '64px',
-        display: 'flex',
-        flexDirection: 'column',
-      }}
-    >
-      <IntroHeading />
-      <CodeEditor />
       <Proceed linkTo="/conditionals" />
     </Container>
   );
