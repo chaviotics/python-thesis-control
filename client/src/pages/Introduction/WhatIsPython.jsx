@@ -187,7 +187,7 @@ function WhatIsPython() {
           choice between them depends on the specific requirements of a project.
         </Typography>
       </Box>
-      <Proceed linkTo="/intro/comment" />
+      <Proceed linkTo="/intro/helloworld" />
     </Container>
   );
 }
