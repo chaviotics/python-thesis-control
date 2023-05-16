@@ -15,8 +15,8 @@ function Message() {
         <br />
         <br />
         Welcome! This Python tutorial is designed to provide you with an
-        interactive learning experience. As such, I would like to encourage you
-        to participate to the best of your abilities.
+        engaging learning experience. As such, I would like to encourage you to
+        participate to the best of your abilities.
         <br />
         <br />
         Please keep in mind that your scores are anonymous and that there is no
