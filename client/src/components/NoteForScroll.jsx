@@ -5,10 +5,10 @@ function NoteForScroll() {
   return (
     <Box sx={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
       <Typography
-        padding="10px"
+        padding="16px"
         display="inline"
-        border="1px solid white"
-        // borderRadius="50px"
+        border="2px solid white"
+        borderRadius="16px"
         fontSize="medium"
         mt="1rem"
         fontStyle="italic"

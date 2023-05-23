@@ -24,7 +24,11 @@ function MainContent() {
         luck!
       </Typography>
 
-      <Typography mt="1rem" mb="1rem">
+      <Typography
+        sx={{ border: '2px solid #ccc', borderRadius: '16px', p: '16px' }}
+        mt="1rem"
+        mb="1rem"
+      >
         Please use your UP Mail in answering the form. If you're encountering
         problems regarding the embedded Google Form below, you can click on this
         button to open another tab for the post-test →{' '}
