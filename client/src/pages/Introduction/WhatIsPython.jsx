@@ -147,7 +147,7 @@ function WhatIsPython() {
           sx={{
             display: 'flex',
             alignItems: 'center',
-            gap: '2.4rem',
+            gap: '3.6rem',
           }}
         >
           {/* Python Logo */}
@@ -169,23 +169,6 @@ function WhatIsPython() {
             </Typography>
           </Box>
         </Box>
-
-        {/* C vs Python */}
-        <Typography mt="7rem" variant="h4">
-          How does Python compare with C?
-        </Typography>
-        <Typography mt="1rem">
-          Python and C are two popular programming languages that have some key
-          differences:
-        </Typography>
-
-        {/* C vs Python Table */}
-        <CompareWithTable />
-
-        <Typography mt="4rem">
-          Both Python and C have their own strengths and weaknesses, and the
-          choice between them depends on the specific requirements of a project.
-        </Typography>
       </Box>
       <Proceed linkTo="/intro/helloworld" />
     </Container>
