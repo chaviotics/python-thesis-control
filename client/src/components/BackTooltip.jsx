@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Box from '@mui/material/Box';
 import Tooltip from '@mui/material/Tooltip';
 import IconButton from '@mui/material/IconButton';
@@ -6,6 +6,7 @@ import Warning from '@mui/icons-material/Warning';
 
 function BackTooltip() {
   const [isHovered, setIsHovered] = useState(false);
+  const [showIcon, setShowIcon] = useState(false);
 
   const handleMouseEnter = () => {
     setIsHovered(true);
@@ -15,22 +16,46 @@ function BackTooltip() {
     setIsHovered(false);
   };
 
+  useEffect(() => {
+    let timeoutId;
+
+    if (isHovered) {
+      setShowIcon(true);
+    } else {
+      timeoutId = setTimeout(() => {
+        setShowIcon(false);
+      }, 5000);
+    }
+
+    return () => {
+      clearTimeout(timeoutId);
+    };
+  }, [isHovered]);
+
   return (
-    <Box position="fixed" top={10} left={10} zIndex={9999}>
-      <Tooltip
-        title="You are reminded NOT to go back to the previous page as it is essential for this research & tutorial 😊"
-        placement="right"
-        open={isHovered}
-        arrow
-      >
-        <IconButton
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
-          sx={{ color: 'white' }}
+    <Box
+      // border="1px solid red"
+      width="320px"
+      height="100px"
+      position="fixed"
+      top={5}
+      left={5}
+      zIndex={9999}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
+      {showIcon && (
+        <Tooltip
+          title="You are reminded NOT to go back to the previous page as it is essential for this research & tutorial 😊"
+          placement="right"
+          arrow
+          // open
         >
-          <Warning />
-        </IconButton>
-      </Tooltip>
+          <IconButton>
+            <Warning sx={{ color: 'white', fontSize: '36px' }} />
+          </IconButton>
+        </Tooltip>
+      )}
     </Box>
   );
 }
