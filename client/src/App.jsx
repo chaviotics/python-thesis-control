@@ -28,6 +28,8 @@ import WhileLoop from './pages/WhileLoop/WhileLoop';
 import ForLoop from './pages/ForLoop/ForLoop';
 import Functions from './pages/Functions/Functions';
 
+import BackTooltip from './components/BackTooltip';
+
 function NavBar() {
   const linkFontColor = '#fff';
   const linkFontColorHover = '#ccc';
@@ -253,6 +255,8 @@ function App() {
     <>
       <ThemeProvider theme={theme}>
         <CssBaseline />
+
+        <BackTooltip />
 
         {/* NavBar is for dev purposes */}
         <Box sx={{ position: 'fixed', right: '0', top: '0', zIndex: '5' }}>
