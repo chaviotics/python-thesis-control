@@ -52,7 +52,7 @@ function BackTooltip() {
           // open
         >
           <IconButton>
-            <Warning sx={{ color: 'white', fontSize: '36px' }} />
+            <Warning sx={{ color: 'yellow', fontSize: '36px' }} />
           </IconButton>
         </Tooltip>
       )}
