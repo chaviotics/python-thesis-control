@@ -186,9 +186,17 @@ else:
           conditions, different messages will be printed.
         </Typography>
 
-        <Typography fontStyle="italic">
+        {/* Notes */}
+
+        <Typography fontStyle="italic" mb="1rem">
           In Python, you can use the <code>and</code>, <code>or</code> and{' '}
           <code>not</code> logical operators in conditional statements.
+        </Typography>
+
+        <Typography fontStyle="italic" mb="4rem">
+          Also, you can enclose the conditions using parenthesis <code>()</code>
+          . For example, <code>age == 18</code> and <code>(age == 18)</code> are
+          both valid syntax in Python.
         </Typography>
       </Box>
 
