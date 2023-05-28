@@ -242,9 +242,9 @@ grapes`}
             content={`fruits = ['apple', 'banana', 'cherry', 'grapes', 'orange']
 
 for fruit in fruits:
-    print(fruit)
     if fruit == 'cherry':
-        continue`}
+        continue
+    print(fruit)`}
             height="220px"
             width="80%"
             title="true"
@@ -264,7 +264,7 @@ orange`}
           In this example, we create a list of fruit names and use a{' '}
           <code>for</code> loop to iterate over the list and print each fruit
           name. We use the <code>continue</code> statement to skip over the
-          fruit name 'cherry', so the loop will print all the other fruit names.
+          fruit name 'cherry', and print all the other fruit names.
         </Typography>
       </Box>
 
