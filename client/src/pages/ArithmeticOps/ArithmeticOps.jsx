@@ -84,10 +84,31 @@ print(3 ** 2) # Output: 9
           height="620px"
           width="100%"
         />
-        {/* Shorthand Operators */}
+
+        {/* Variable Updates with Arithmetic Operations & Shorthand Operators */}
         <Typography mt="4rem" textAlign="center" variant="h3">
-          Shorthand Operators
+          Variable Updates with Arithmetic Operations <br /> & Shorthand
+          Operators
         </Typography>
+
+        <Typography mt="2rem" mb="1rem">
+          Variable updates involve modifying the value of a variable using
+          arithmetic operations and assigning the result back to the variable.
+          Consider the code below. In line 1, we have <code>x</code> with the
+          value of <code>5</code>. We then update <code>x</code> by adding
+          itself with <code>2</code>. When we print it, the value we get is{' '}
+          <code>7</code>.
+        </Typography>
+
+        <CodeEditor
+          content={`x = 5
+x = x + 2  # Update x by 2
+
+print(x) # Output: 7
+`}
+          height="150px"
+          width="100%"
+        />
 
         <Typography mt="2rem" mb="1rem">
           In Python, shorthand operators are used to combine an arithmetic
