@@ -110,7 +110,7 @@ print(x) # Output: 7
           width="100%"
         />
 
-        <Typography mt="2rem" mb="1rem">
+        <Typography mt="4rem" mb="1rem">
           In Python, shorthand operators are used to combine an arithmetic
           operation and an assignment in a single step. They are useful for
           writing more concise and readable code.

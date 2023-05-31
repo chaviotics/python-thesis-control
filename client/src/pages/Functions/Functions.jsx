@@ -165,7 +165,7 @@ print_message()
         </Typography>
 
         {/* Example 1 */}
-        <Typography variant="h5" mt="2rem" mb="1rem">
+        <Typography variant="h5" mt="2rem" mb="1rem" fontWeight="bold">
           Example 1: Using Function in a Conditional Statement:
         </Typography>
 
@@ -222,7 +222,7 @@ even_or_odd(44)
         </Typography>
 
         {/* Example 2 */}
-        <Typography variant="h5" mt="3rem" mb="1rem">
+        <Typography variant="h5" mt="3rem" mb="1rem" fontWeight="bold">
           Example 2: Using Function with a List and a Loop:
         </Typography>
 

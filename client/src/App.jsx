@@ -259,13 +259,12 @@ function App() {
         <BackTooltip />
 
         {/* NavBar is for dev purposes */}
-        <Box sx={{ position: 'fixed', right: '0', top: '0', zIndex: '5' }}>
+        {/* <Box sx={{ position: 'fixed', right: '0', top: '0', zIndex: '5' }}>
           <Button size="large" variant="contained" onClick={toggleNavBar}>
             {showNavBar ? 'Hide NavBar' : 'Show NavBar'}
           </Button>
           {showNavBar && <NavBar />}
-          {/* rest of your code */}
-        </Box>
+        </Box> */}
         {/* <NavBar /> */}
 
         <Routes>
